@@ -1,0 +1,12 @@
+# ====================================================================
+# ASTROBIOLOGY CATALOG PROFILE: WASP-39 b (JWST SPECTROSCOPIC TARGET)
+# ====================================================================
+
+# ☁️ Dominated heavily by hot Water and Carbon Dioxide signatures
+H2O = 0.90
+CO2 = 0.85
+
+# 🌌 Trace biomarkers (Extremely low or non-existent on hot gas giants)
+CH4 = 0.02
+O2 = 0.00
+O3 = 0.01

@@ -1,0 +1,13 @@
+# ====================================================================
+# ASTROBIOLOGY SAMPLE CONFIGURATION PROFILE: DYNAMIC HABITABLE WORLD
+# ====================================================================
+# Values run between 0.0 (None) and 1.0 (Maximum Saturated Valley Depth)
+
+# 🌌 Biosignatures & Biomarkers Checklist
+O2 = 0.65
+O3 = 0.45
+CH4 = 0.25
+
+# ☁️ Atmospheric Baseline Matrices
+H2O = 0.85
+CO2 = 0.08
