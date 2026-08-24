@@ -1,0 +1,12 @@
+{
+  "candidate_count": 1,
+  "confirmed_count": 2,
+  "conflict_count": 2,
+  "false_positive_count": 2,
+  "included_binary_cohort_size": 2,
+  "label_policy": "confirmed_vs_false_positive_v1",
+  "multi_koi_hosts": 1,
+  "raw_row_count": 6,
+  "unique_kepid_hosts": 5,
+  "unlabelled_count": 1
+}

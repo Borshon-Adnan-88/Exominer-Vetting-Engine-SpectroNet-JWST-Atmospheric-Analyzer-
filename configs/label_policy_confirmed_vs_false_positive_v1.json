@@ -1,0 +1,14 @@
+{
+  "name": "confirmed_vs_false_positive_v1",
+  "source_field": "koi_disposition",
+  "mapping": {
+    "CONFIRMED": 1,
+    "FALSE POSITIVE": 0
+  },
+  "excluded": {
+    "CANDIDATE": "candidate_excluded_by_policy",
+    "NOT DISPOSITIONED": "unlabelled_or_not_dispositioned",
+    "null": "unlabelled_or_not_dispositioned"
+  },
+  "exclude_conflicts": true
+}

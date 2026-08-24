@@ -1,0 +1,7 @@
+kepid,kepoi_name,label,label_name,inclusion_status,exclusion_reason,label_conflict
+1001,K00001.01,1,positive_confirmed,included,,False
+1001,K00001.02,0,negative_false_positive,included,,False
+1002,K00002.01,,,excluded_candidate,candidate_excluded_by_policy,False
+1003,K00003.01,,,excluded_unlabelled,unlabelled_or_not_dispositioned,False
+1004,K00004.01,,,excluded_conflict,contradictory_source_labels,True
+1005,K00005.01,,,excluded_conflict,contradictory_source_labels,True

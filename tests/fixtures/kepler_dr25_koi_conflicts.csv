@@ -1,0 +1,3 @@
+kepid,kepoi_name,kepler_name,koi_disposition,koi_pdisposition,expected_conflict_reason
+1004,K00004.01,Kepler-4 b,CONFIRMED,FALSE POSITIVE,confirmed_but_robovetter_false_positive
+1005,K00005.01,Kepler-5 b,FALSE POSITIVE,FALSE POSITIVE,nonconfirmed_with_kepler_name

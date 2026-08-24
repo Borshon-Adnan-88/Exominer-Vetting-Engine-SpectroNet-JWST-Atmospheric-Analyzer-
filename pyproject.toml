@@ -17,8 +17,11 @@ dependencies = [
 test = ["pytest>=8,<10"]
 
 [tool.setuptools.packages.find]
-include = ["exominer*", "spectronet*"]
+include = ["exominer*", "spectronet*", "kepler_catalog*"]
 
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]
+markers = [
+    "network: opt-in tests that access the NASA Exoplanet Archive",
+]

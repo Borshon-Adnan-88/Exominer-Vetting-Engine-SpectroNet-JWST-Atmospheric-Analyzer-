@@ -71,3 +71,30 @@ Future work may add versioned Kepler/TESS TCE data, reproducible preprocessing,
 host-star splits, classical baselines, a real global/local 1D CNN, repeated
 evaluation, and cross-mission generalisation. None of those research stages is
 implemented in this Stage 0 prototype.
+
+## Stage 1: Kepler catalogue foundation
+
+The repository includes an offline-reproducible metadata pipeline for the NASA
+Exoplanet Archive `q1_q17_dr25_koi` delivery. It validates the live TAP schema
+before retrieval, hashes raw bytes before parsing, preserves all selected KOIs in
+a deterministic manifest, and applies the versioned
+`confirmed_vs_false_positive_v1` policy with conflict auditing.
+
+This remains KOI-centred: it is not yet a complete DR25 TCE dataset, contains no
+light-curve FITS files, defines no train/test splits, and trains no models. See
+`docs/data_card_kepler_dr25.md` for scientific scope and limitations.
+
+The catalogue workflow is:
+
+```bash
+python -m scripts.fetch_kepler_catalog
+python -m scripts.build_kepler_manifest
+python -m pytest -m "not network"
+```
+
+The fetch command is the only normal workflow step requiring network access.
+The live integration test is explicitly opt-in:
+
+```bash
+RUN_NETWORK_TESTS=1 python -m pytest tests/test_catalog_network.py -m network
+```

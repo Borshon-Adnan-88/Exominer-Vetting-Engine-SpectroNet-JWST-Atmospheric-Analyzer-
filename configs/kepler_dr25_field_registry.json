@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "identifier": ["kepoi_name"],
+  "group_only": ["kepid"],
+  "tce_federation": ["koi_tce_plnt_num", "koi_tce_delivname"],
+  "provenance": ["source_row_index", "koi_vet_stat", "koi_vet_date"],
+  "candidate_feature_pending_review": [
+    "koi_period", "koi_time0bk", "koi_duration", "koi_depth",
+    "koi_model_snr", "koi_max_mult_ev", "koi_num_transits",
+    "koi_quarters", "koi_count", "koi_steff", "koi_slogg",
+    "koi_smet", "koi_srad", "koi_smass", "ra", "dec", "koi_kepmag"
+  ],
+  "forbidden_future_model_feature": [
+    "kepler_name", "koi_disposition", "koi_pdisposition", "koi_score",
+    "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec",
+    "koi_disp_prov", "koi_comment", "label", "label_name", "label_policy",
+    "inclusion_status", "exclusion_reason", "label_conflict", "conflict_reason"
+  ]
+}

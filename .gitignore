@@ -8,6 +8,7 @@ htmlcov/
 venv/
 .streamlit/secrets.toml
 data/raw/
+data/tmp/
 data/interim/
 data/processed/
 models/

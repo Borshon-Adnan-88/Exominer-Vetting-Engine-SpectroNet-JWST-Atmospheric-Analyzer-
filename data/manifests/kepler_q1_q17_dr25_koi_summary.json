@@ -1,0 +1,14 @@
+{
+  "candidate_count": 1358,
+  "confirmed_count": 2731,
+  "conflict_count": 59,
+  "conflicts_sha256": "3d78a4d8f4ca5ecf4400899bcaf0e0ee0a9e514032c3c75cd52511917d629a46",
+  "false_positive_count": 3965,
+  "included_binary_cohort_size": 6637,
+  "label_policy": "confirmed_vs_false_positive_v1",
+  "manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+  "multi_koi_hosts": 775,
+  "raw_row_count": 8054,
+  "unique_kepid_hosts": 6923,
+  "unlabelled_count": 0
+}
