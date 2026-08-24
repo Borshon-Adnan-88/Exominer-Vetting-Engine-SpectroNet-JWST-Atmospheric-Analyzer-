@@ -1,68 +1,73 @@
-# 🌌 Astrobiology Data Science & Deep Learning Platform
+# Astrobiology Synthetic Data Prototype
 
-An advanced, multi-view machine learning platform designed to automate the detection of exoplanets and classify atmospheric biosignatures. This repository integrates two distinct astrobiology-focused frameworks utilizing optimized local pipelines for deployment.
+This repository is an early interface and synthetic-data prototype for two future
+astrobiology machine-learning projects. **It does not currently contain trained
+machine-learning models or perform inference on observed data.**
 
----
+## Current components
 
-## 🛠️ System Architecture & Portfolios
+### Synthetic transit prototype
 
-### 1. ExoMiner Vetting Engine (Transit Diagnostics)
-Inspired by NASA’s automated exoplanet validation systems, this module processes stellar light curves to isolate real planetary transit events from astrophysical false positives (e.g., eclipsing binary stars or stellar rotation noise).
+The left Streamlit panel generates deterministic toy global and local
+transit-shaped relative-flux arrays. A target label can be entered for display,
+but the application does not query Kepler or TESS and does not download or
+phase-fold observed light curves.
 
-*   *Data Representation:* Raw stellar timelines are phase-folded around candidate orbital parameters and split into two separate 1D vector tensors:
-    *   *Global Folded View (2000 bins):* Captures the full orbital period baseline to evaluate out-of-transit stellar stability and periodicity.
-    *   *Local Folded View (200 bins):* Crops and zooms directly into the transit ingress/egress window to assess the depth and geometric shape of the eclipse.
-*   *Target Machine Learning Model:* A Multi-Input Convolutional Neural Network (CNN) built in TensorFlow. The model uses separate feature extraction blocks to analyze the local and global structures in parallel before fusing them into a dense classification layer.
+The displayed prototype similarity score is a hand-written comparison with the
+original demonstration defaults. It is not a probability, classifier output,
+planet validation, or planet confirmation.
 
-### 2. SpectroNet (JWST Atmospheric Analyzer)
-An atmospheric inversion model framework designed to extract chemical abundances from transit spectroscopy datasets, mimicking measurements taken by instruments like the James Webb Space Telescope (JWST) NIRSpec.
+Transit epoch is intentionally absent from the synthetic generator because it
+would have no effect on generated arrays. Epoch will be reintroduced when the
+project implements genuine phase-folding of observed Kepler/TESS light curves.
 
-*   *Data Representation:* Features consist of a 1D vector tracking relative transit depths across the near-to-mid-infrared spectrum (1.0µm to 5.0µm).
-*   *Target Machine Learning Model:* A 1D Convolutional Deep Residual Network (ResNet). The architecture utilizes skip-connections to retain high-frequency molecular signal variations across network layers, feeding into a multi-head regression output layer.
-*   *Biosignature Identification:* Targets specific absorption valleys corresponding to biogenic gases and non-equilibrium chemistry:
-    *   *Water Vapor (H₂O):* Absorbs heavily at 2.7µm.
-    *   *Methane (CH₄):* Clear biogenic proxy dropping at 3.3µm.
-    *   *Carbon Dioxide (CO₂):* Vital carbon-cycle tracer creating sharp dips at 4.3µm.
+### Synthetic spectrum prototype
 
----
+The right panel adds five analytic Gaussian dips and white noise to a unit
+baseline. Its gas abundance values are generator inputs. This is a toy spectrum,
+not a JWST instrument simulator, radiative-transfer model, biosignature
+classifier, or atmospheric retrieval. No ResNet is implemented or executed.
 
-## 💻 Repository Directory Layout
+Supported toy inputs are CH4, CO2, H2O, O2, and O3, each constrained to the
+dimensionless interval `[0, 1]`.
 
-text
-├── 📂 exominer/
-│    └── 📄 preprocessing.py  # Phase-folding, index-masking, and Min-Max scaling
-├── 📂 spectronet/
-│    └── 📄 preprocessing.py  # Spectroscopic gas simulation and instrument noise injection
-├── 📄 app.py                # Unified Streamlit Control Center application
-├── 📄 requirements.txt      # Modular dependencies (Numpy, Pandas, Streamlit, Scipy)
-└── 📄 setup.py              # Automated, offline workspace generation script
+## Run the application
 
-## 🚀 Deployment Instructions
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
 
-### Integrated Side-by-Side Control Center
-The platform features an open-workspace architecture that runs both machine learning pipelines simultaneously. Using `st.session_state` caching, the dashboard locks data in memory. This allows you to run independent planet searches on the left and simulate gas profiles on the right without erasing active outputs.
+Both generators expose explicit random seeds and use local NumPy random-number
+generators, allowing an output to be reproduced without modifying global NumPy
+random state.
 
-1. Install the required data structures and framework dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Launch the graphical user interface via the local web application runner:
-   ```bash
-   python -m streamlit run app.py
-   ```
+## Run tests
 
-### 📂 Custom Configuration File Templates
+Install the test dependency and run:
 
-Users can bypass the dashboard's manual sliders by uploading custom planetary text configurations (`.txt` or `.ini` format). The dynamic data script reads custom columns instantly to compile corresponding target spectroscopic absorption charts.
+```bash
+python -m pip install -e ".[test]"
+python -m pytest
+```
 
-Create a blank text document named `exo_earth.txt` and paste this block inside to use as a custom template:
+## Repository layout
 
 ```text
-# Custom Planetary Atmospheric Signature Template
-# Abundances map from 0.0 (None) to 1.0 (Maximum Saturated Valley)
-O2 = 0.65
-H2O = 0.80
-CH4 = 0.15
-CO2 = 0.05
-O3 = 0.45
+exominer/             Synthetic transit generator
+spectronet/           Gaussian toy spectrum generator and template parser
+sample_planet_upload/ Example toy abundance templates
+docs/history/         Clearly labelled screenshots from the superseded prototype
+tests/                Unit tests for generation, validation, and reproducibility
+app.py                Two-panel Streamlit application
 ```
+
+## Research direction
+
+The planned research question is: **How robust are machine-learning exoplanet
+classifiers to realistic dataset splitting and changes in observational domain?**
+
+Future work may add versioned Kepler/TESS TCE data, reproducible preprocessing,
+host-star splits, classical baselines, a real global/local 1D CNN, repeated
+evaluation, and cross-mission generalisation. None of those research stages is
+implemented in this Stage 0 prototype.

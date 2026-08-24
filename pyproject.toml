@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astrobiology-synthetic-prototype"
+version = "0.1.0"
+description = "Tested synthetic transit and toy spectrum Streamlit prototype"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<3",
+    "streamlit>=1.40,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["exominer*", "spectronet*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

@@ -1,0 +1,1 @@
+"""Synthetic spectrum prototype package."""
