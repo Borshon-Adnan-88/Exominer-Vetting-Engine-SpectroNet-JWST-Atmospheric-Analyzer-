@@ -1,0 +1,53 @@
+{
+  "pipeline_id": "kepler_dr25_pdcsap_global_local_v1",
+  "source": {
+    "archive": "MAST", "mission": "Kepler", "author": "Kepler",
+    "data_release": 25, "quarter_minimum": 1, "quarter_maximum": 17,
+    "cadence": "long", "nominal_exposure_seconds_descriptive": 1800,
+    "validate_exact_nominal_exposure": false, "product_suffix": "_llc.fits"
+  },
+  "flux": {
+    "primary": "PDCSAP_FLUX", "diagnostic": "SAP_FLUX",
+    "uncertainty": "PDCSAP_FLUX_ERR", "quality": "SAP_QUALITY",
+    "time": "TIME", "time_system": "BKJD", "bkjd_offset": 2454833.0
+  },
+  "quality_mask": {"name": "kepler_default_frozen_v1", "integer": 1130799},
+  "normalization": {
+    "scope": "per_quarter_per_target", "statistic": "median",
+    "divide_flux": true, "divide_uncertainty": true,
+    "additional_detrending": false, "sigma_clipping": false
+  },
+  "global_view": {
+    "minimum": -0.5, "maximum": 0.5, "bins": 2000,
+    "aggregation": "median", "empty_fill": "circular_linear_interpolation"
+  },
+  "local_view": {
+    "minimum": -2.5, "maximum": 2.5, "bins": 200,
+    "aggregation": "median", "empty_fill": "linear_interpolation_nearest_at_edges"
+  },
+  "hard_failures": [
+    "fits_identity_mismatch", "unsupported_data_release", "unsupported_cadence",
+    "invalid_period", "invalid_epoch", "invalid_duration", "duration_not_shorter_than_period",
+    "no_usable_photometry", "no_observed_global_bins", "no_observed_local_bins",
+    "nonfinite_constructed_output"
+  ],
+  "pilot_qc_flags": {
+    "minimum_valid_quarters": 8,
+    "minimum_temporal_baseline_fraction": 0.50,
+    "temporal_baseline_fraction_definition": {
+      "numerator": "maximum usable quality-masked finite BKJD minus minimum usable quality-masked finite BKJD",
+      "denominator": "maximum finite raw BKJD minus minimum finite raw BKJD across all identity-valid downloaded Q1-Q17 files for the target",
+      "zero_denominator_result": 0.0
+    },
+    "minimum_total_valid_cadences": 1000,
+    "minimum_distinct_observed_transit_epochs": 3,
+    "minimum_valid_in_transit_cadences": 10,
+    "minimum_global_observed_bin_fraction": 0.80,
+    "minimum_local_observed_bin_fraction": 0.10,
+    "maximum_global_missing_run_fraction": 0.10,
+    "maximum_local_missing_run_fraction": 0.25
+  },
+  "diagnostic_review_flags": {"maximum_interpolated_fraction": 0.20},
+  "qc_behavior": {"failure_is_exclusion": false, "preserve_constructible_arrays": true},
+  "output": {"dtype": "float32", "count_dtype": "int32", "mask_dtype": "bool"}
+}

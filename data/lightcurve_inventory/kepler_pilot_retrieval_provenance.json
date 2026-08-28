@@ -1,0 +1,16 @@
+{
+  "archive": "MAST",
+  "author": "Kepler",
+  "cadence": "long",
+  "discovered_at_utc": "2026-08-24T23:57:07.194692+00:00",
+  "downloaded_bytes": 101243520,
+  "downloaded_inventory_sha256": "a76e2e1b1200d33e003ae428184aba15d8351c486bc21efee59f0b3c01becf0f",
+  "embedded_checksum_failures": 231,
+  "fits_checksum_manifest_sha256": "7a1207c6efe7787a2897aa824c01801d51df28d1b73409c7bc1b74ce3dcaa703",
+  "inventory_sha256": "4dc1dfe0fa419b1d62f8520f724d9928d8f7940a8c0d6db19ce254f16d86bd4e",
+  "mission": "Kepler",
+  "product_count": 231,
+  "quarters_requested": "Q1-Q17",
+  "selection_sha256": "c896d06c0b77c25fbd77ccc501fe92f5c94c7db6efe84ab2c3d04a504b1018fe",
+  "target_count": 16
+}

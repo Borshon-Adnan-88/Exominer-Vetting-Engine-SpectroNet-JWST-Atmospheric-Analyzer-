@@ -1,3 +1,6 @@
 numpy>=2.0,<3
 pandas>=2.2,<3
 streamlit>=1.40,<2
+astropy>=7.0,<8
+astroquery>=0.4.9,<0.5
+matplotlib>=3.9,<4

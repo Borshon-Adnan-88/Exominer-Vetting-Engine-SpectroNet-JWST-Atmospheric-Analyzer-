@@ -1,0 +1,46 @@
+{
+  "pilot_id": "kepler_dr25_koi_pilot_v1",
+  "source": {
+    "manifest": "data/manifests/kepler_q1_q17_dr25_koi_manifest.csv",
+    "manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+    "label_policy": "confirmed_vs_false_positive_v1"
+  },
+  "selection_size": 16,
+  "randomness": {"enabled": false, "seed": null},
+  "eligibility": {
+    "inclusion_status": "included",
+    "label_conflict": false,
+    "allowed_labels": [1, 0],
+    "require_unique_kepoi_name": true,
+    "require_unique_selected_kepid": true,
+    "require_finite_fields": ["koi_period", "koi_time0bk", "koi_duration", "koi_model_snr"],
+    "require_positive_fields": ["koi_period", "koi_duration", "koi_model_snr"],
+    "require_duration_shorter_than_period": true
+  },
+  "host_multiplicity": {
+    "population": "all_rows_in_frozen_stage1_manifest",
+    "group_field": "kepid",
+    "single_maximum": 1,
+    "multi_minimum": 2
+  },
+  "period_strata_days": [
+    {"name": "very_short", "minimum": null, "maximum": 3.0},
+    {"name": "short", "minimum": 3.0, "maximum": 10.0},
+    {"name": "medium", "minimum": 10.0, "maximum": 100.0},
+    {"name": "long", "minimum": 100.0, "maximum": null}
+  ],
+  "stratification": {
+    "labels": [1, 0],
+    "host_categories": ["multi", "single"],
+    "period_strata": ["very_short", "short", "medium", "long"],
+    "objects_per_cell": 1
+  },
+  "ranking": {
+    "transform": "log10",
+    "percentile_method": "average",
+    "snr_target_percentiles": {"very_short": 0.10, "short": 0.90, "medium": 0.30, "long": 0.70},
+    "duration_target_percentiles": {"very_short": 0.90, "short": 0.10, "medium": 0.70, "long": 0.30},
+    "sort_keys": ["snr_distance", "duration_distance", "kepid", "kepoi_name"]
+  },
+  "empty_cell_policy": "fail_without_fallback"
+}

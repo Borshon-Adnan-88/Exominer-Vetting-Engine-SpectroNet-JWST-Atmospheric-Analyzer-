@@ -11,13 +11,16 @@ dependencies = [
     "numpy>=2.0,<3",
     "pandas>=2.2,<3",
     "streamlit>=1.40,<2",
+    "astropy>=7.0,<8",
+    "astroquery>=0.4.9,<0.5",
+    "matplotlib>=3.9,<4",
 ]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
 
 [tool.setuptools.packages.find]
-include = ["exominer*", "spectronet*", "kepler_catalog*"]
+include = ["exominer*", "spectronet*", "kepler_catalog*", "kepler_lightcurves*"]
 
 [tool.pytest.ini_options]
 addopts = "-ra"

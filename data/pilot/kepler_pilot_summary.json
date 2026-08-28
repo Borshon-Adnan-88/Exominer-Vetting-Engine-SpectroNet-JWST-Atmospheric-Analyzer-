@@ -1,0 +1,105 @@
+{
+  "cell_counts": [
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 0.0,
+      "period_stratum": "long"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 0.0,
+      "period_stratum": "medium"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 0.0,
+      "period_stratum": "short"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 0.0,
+      "period_stratum": "very_short"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 0.0,
+      "period_stratum": "long"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 0.0,
+      "period_stratum": "medium"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 0.0,
+      "period_stratum": "short"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 0.0,
+      "period_stratum": "very_short"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 1.0,
+      "period_stratum": "long"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 1.0,
+      "period_stratum": "medium"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 1.0,
+      "period_stratum": "short"
+    },
+    {
+      "count": 1,
+      "host_category": "multi",
+      "label": 1.0,
+      "period_stratum": "very_short"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 1.0,
+      "period_stratum": "long"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 1.0,
+      "period_stratum": "medium"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 1.0,
+      "period_stratum": "short"
+    },
+    {
+      "count": 1,
+      "host_category": "single",
+      "label": 1.0,
+      "period_stratum": "very_short"
+    }
+  ],
+  "eligible_count": 6581,
+  "pilot_id": "kepler_dr25_koi_pilot_v1",
+  "selected_count": 16,
+  "source_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+  "unique_selected_hosts": 16
+}

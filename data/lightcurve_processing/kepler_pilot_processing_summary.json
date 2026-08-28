@@ -1,0 +1,8 @@
+{
+  "constructed": 16,
+  "hard_failures": 0,
+  "objects": 16,
+  "processing_manifest_sha256": "250536dcecf6477abbcc9861e822129fbf2559d0f6dd485a37c43c8150aa37c2",
+  "qc_fail": 2,
+  "qc_pass": 14
+}

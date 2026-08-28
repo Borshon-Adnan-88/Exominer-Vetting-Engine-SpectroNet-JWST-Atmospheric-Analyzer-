@@ -80,8 +80,8 @@ before retrieval, hashes raw bytes before parsing, preserves all selected KOIs i
 a deterministic manifest, and applies the versioned
 `confirmed_vs_false_positive_v1` policy with conflict auditing.
 
-This remains KOI-centred: it is not yet a complete DR25 TCE dataset, contains no
-light-curve FITS files, defines no train/test splits, and trains no models. See
+This remains KOI-centred: it is not yet a complete DR25 TCE dataset, defines no
+train/test splits, and trains no models. See
 `docs/data_card_kepler_dr25.md` for scientific scope and limitations.
 
 The catalogue workflow is:
@@ -98,3 +98,15 @@ The live integration test is explicitly opt-in:
 ```bash
 RUN_NETWORK_TESTS=1 python -m pytest tests/test_catalog_network.py -m network
 ```
+
+## Stage 2: Kepler light-curve pilot
+
+Stage 2 freezes official MAST Kepler Q1–Q17 DR25 long-cadence products for a
+deterministic 16-KOI pilot and constructs label-blind global and local transit
+views from PDCSAP flux. Raw FITS and generated arrays are ignored; selection,
+product inventory, provenance, checksums, processing metadata, and compact
+diagnostics are versioned. The QC thresholds are pilot review flags, not final
+scientific exclusion rules. See `docs/kepler_lightcurve_preprocessing.md`.
+
+No models, dataset splits, TESS processing, or Streamlit integration are part of
+Stage 2.

@@ -12,3 +12,8 @@ data/tmp/
 data/interim/
 data/processed/
 models/
+data/lightcurves/raw/
+data/lightcurves/processed/
+data/lightcurves/diagnostics/per_target/
+data/cache/mast/
+*.part
