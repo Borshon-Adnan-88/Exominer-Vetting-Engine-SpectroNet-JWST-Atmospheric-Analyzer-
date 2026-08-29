@@ -5,6 +5,24 @@ import pytest
 from astropy.io import fits
 
 
+@pytest.fixture(scope="session")
+def split_config():
+    import json
+    return json.loads(Path("configs/kepler_split_policy_object_vs_host_v1.json").read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="session")
+def split_cohort(split_config):
+    from kepler_splits.cohort import load_cohort
+    return load_cohort(split_config)
+
+
+@pytest.fixture(scope="session")
+def split_assignments(split_config, split_cohort):
+    from kepler_splits.assign import build_assignments
+    return build_assignments(split_cohort, split_config)
+
+
 @pytest.fixture
 def kepler_fits_factory(tmp_path):
     def create(*, kepid=1001, quarter=4, data_release=25, rows=500, cadence_days=0.02043365, filename=None):

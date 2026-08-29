@@ -110,3 +110,11 @@ scientific exclusion rules. See `docs/kepler_lightcurve_preprocessing.md`.
 
 No models, dataset splits, TESS processing, or Streamlit integration are part of
 Stage 2.
+
+## Stage 3: deterministic leakage-study splits
+
+Stage 3 freezes ten paired 70/15/15 object-stratified and host-group-stratified
+split repeats for the conflict-free Stage 1 binary KOI cohort. Grouped splits
+keep every KOI sharing a `kepid` in one partition. Split assignments and audits
+contain no model training or full-cohort photometry preprocessing. See
+`docs/kepler_split_policy.md`.

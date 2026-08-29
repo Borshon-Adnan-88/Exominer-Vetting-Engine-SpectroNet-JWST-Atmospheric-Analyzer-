@@ -1,0 +1,292 @@
+{
+  "acceptance_pass": true,
+  "assignment_rows": 132740,
+  "assignment_sha256": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+  "audit_sha256": "a01cffbd2d3b93710075e7c78bd899caa3affe810458eed80f52d07ae39b4718",
+  "cohort_hosts": 5804,
+  "cohort_rows": 6637,
+  "config_sha256": "d9d8a4b4e208aaea2c6bdf85dde6b78c353055b7d6e64884e1ff0ba3703291b1",
+  "label_policy": "confirmed_vs_false_positive_v1",
+  "mixed_label_hosts": 36,
+  "multi_koi_hosts": 562,
+  "negative_count": 3963,
+  "paired_strategy_agreement": [
+    {
+      "repeat_id": 0,
+      "same_partition_fraction": 0.5365375922856712,
+      "same_partition_rows": 3561
+    },
+    {
+      "repeat_id": 1,
+      "same_partition_fraction": 0.5281000452011451,
+      "same_partition_rows": 3505
+    },
+    {
+      "repeat_id": 2,
+      "same_partition_fraction": 0.5330721711616694,
+      "same_partition_rows": 3538
+    },
+    {
+      "repeat_id": 3,
+      "same_partition_fraction": 0.5299080910049722,
+      "same_partition_rows": 3517
+    },
+    {
+      "repeat_id": 4,
+      "same_partition_fraction": 0.5341268645472352,
+      "same_partition_rows": 3545
+    },
+    {
+      "repeat_id": 5,
+      "same_partition_fraction": 0.5300587614886244,
+      "same_partition_rows": 3518
+    },
+    {
+      "repeat_id": 6,
+      "same_partition_fraction": 0.5347295464818442,
+      "same_partition_rows": 3549
+    },
+    {
+      "repeat_id": 7,
+      "same_partition_fraction": 0.5336748530962785,
+      "same_partition_rows": 3542
+    },
+    {
+      "repeat_id": 8,
+      "same_partition_fraction": 0.5392496609914118,
+      "same_partition_rows": 3579
+    },
+    {
+      "repeat_id": 9,
+      "same_partition_fraction": 0.5326201597107126,
+      "same_partition_rows": 3535
+    }
+  ],
+  "positive_count": 2674,
+  "positive_prevalence": 0.4028928732861232,
+  "source_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+  "split_policy_version": "kepler_koi_object_vs_host_v1",
+  "strategy_repeats": [
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 0,
+      "seed": 1729,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 1,
+      "seed": 2718,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 2,
+      "seed": 3141,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 3,
+      "seed": 4099,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 4,
+      "seed": 5279,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 5,
+      "seed": 6553,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 6,
+      "seed": 7919,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 7,
+      "seed": 9341,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 8,
+      "seed": 104729,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 0,
+      "fragmented_multi_koi_hosts": 0,
+      "grouped_host_overlap": 0,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 36,
+      "repeat_id": 9,
+      "seed": 130363,
+      "strategy": "host_group_stratified"
+    },
+    {
+      "fragmented_hosts": 306,
+      "fragmented_multi_koi_hosts": 306,
+      "grouped_host_overlap": 306,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 13,
+      "repeat_id": 0,
+      "seed": 1729,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 303,
+      "fragmented_multi_koi_hosts": 303,
+      "grouped_host_overlap": 303,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 16,
+      "repeat_id": 1,
+      "seed": 2718,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 293,
+      "fragmented_multi_koi_hosts": 293,
+      "grouped_host_overlap": 293,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 15,
+      "repeat_id": 2,
+      "seed": 3141,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 292,
+      "fragmented_multi_koi_hosts": 292,
+      "grouped_host_overlap": 292,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 18,
+      "repeat_id": 3,
+      "seed": 4099,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 302,
+      "fragmented_multi_koi_hosts": 302,
+      "grouped_host_overlap": 302,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 9,
+      "repeat_id": 4,
+      "seed": 5279,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 297,
+      "fragmented_multi_koi_hosts": 297,
+      "grouped_host_overlap": 297,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 13,
+      "repeat_id": 5,
+      "seed": 6553,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 309,
+      "fragmented_multi_koi_hosts": 309,
+      "grouped_host_overlap": 309,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 18,
+      "repeat_id": 6,
+      "seed": 7919,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 281,
+      "fragmented_multi_koi_hosts": 281,
+      "grouped_host_overlap": 281,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 14,
+      "repeat_id": 7,
+      "seed": 9341,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 293,
+      "fragmented_multi_koi_hosts": 293,
+      "grouped_host_overlap": 293,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 16,
+      "repeat_id": 8,
+      "seed": 104729,
+      "strategy": "object_stratified"
+    },
+    {
+      "fragmented_hosts": 311,
+      "fragmented_multi_koi_hosts": 311,
+      "grouped_host_overlap": 311,
+      "koi_partition_overlap": 0,
+      "missing_or_additional_kois": 0,
+      "mixed_label_hosts_intact": 15,
+      "repeat_id": 9,
+      "seed": 130363,
+      "strategy": "object_stratified"
+    }
+  ],
+  "tolerance_failures": []
+}

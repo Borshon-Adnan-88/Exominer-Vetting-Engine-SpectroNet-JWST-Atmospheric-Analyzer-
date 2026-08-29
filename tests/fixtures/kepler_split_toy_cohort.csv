@@ -1,0 +1,5 @@
+source_row_index,kepid,kepoi_name,label,label_policy,inclusion_status,label_conflict,koi_period,koi_duration,koi_model_snr
+0,1,K00001.01,1,confirmed_vs_false_positive_v1,included,false,2,3,10
+1,1,K00001.02,0,confirmed_vs_false_positive_v1,included,false,3,4,11
+2,2,K00002.01,1,confirmed_vs_false_positive_v1,included,false,4,5,12
+3,3,K00003.01,0,confirmed_vs_false_positive_v1,included,false,5,6,

@@ -1,0 +1,36 @@
+{
+  "split_policy_version": "kepler_koi_object_vs_host_v1",
+  "source_manifest": "data/manifests/kepler_q1_q17_dr25_koi_manifest.csv",
+  "source_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+  "label_policy": "confirmed_vs_false_positive_v1",
+  "cohort": {"inclusion_status": "included", "label_conflict": false},
+  "sort_fields": ["kepid", "kepoi_name", "source_row_index"],
+  "strategies": ["object_stratified", "host_group_stratified"],
+  "algorithm": {
+    "object_stratified": "sklearn.model_selection.StratifiedKFold",
+    "host_group_stratified": "sklearn.model_selection.StratifiedGroupKFold",
+    "n_splits": 20,
+    "shuffle": true,
+    "fold_partition_map": {
+      "train": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "validation": [14, 15, 16],
+      "test": [17, 18, 19]
+    },
+    "fold_id_note": "Fold IDs are arbitrary deterministic algorithm labels without ordinal or scientific meaning. They must not be reordered or optimized after inspection."
+  },
+  "target_fractions": {"train": 0.70, "validation": 0.15, "test": 0.15},
+  "seeds": [1729, 2718, 3141, 4099, 5279, 6553, 7919, 9341, 104729, 130363],
+  "tolerances": {
+    "maximum_absolute_row_fraction_deviation": 0.01,
+    "maximum_absolute_class_prevalence_deviation": 0.015,
+    "require_both_classes": true,
+    "failure_action": "stop_without_seed_search_fold_reordering_assignment_optimization_or_tolerance_relaxation"
+  },
+  "audit_fields": ["koi_period", "koi_duration", "koi_model_snr"],
+  "forbidden_model_fields": [
+    "koi_score", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec",
+    "koi_pdisposition", "koi_disposition", "koi_disp_prov", "koi_comment",
+    "koi_vet_stat", "koi_vet_date", "kepler_name", "label_conflict",
+    "conflict_reason", "inclusion_status", "exclusion_reason"
+  ]
+}

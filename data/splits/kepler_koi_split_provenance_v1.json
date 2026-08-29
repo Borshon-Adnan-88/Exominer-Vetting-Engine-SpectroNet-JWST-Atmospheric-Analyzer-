@@ -1,0 +1,16 @@
+{
+  "assignments": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+  "audit": "a01cffbd2d3b93710075e7c78bd899caa3affe810458eed80f52d07ae39b4718",
+  "built_at_utc": "2026-08-29T00:14:52.494604+00:00",
+  "config": "d9d8a4b4e208aaea2c6bdf85dde6b78c353055b7d6e64884e1ff0ba3703291b1",
+  "environment": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.4",
+    "scikit_learn": "1.9.0"
+  },
+  "git_revision": "290da0caf630da03afa0f7645da0eadd0fc4f03e",
+  "summary": "ab10a184438d283f38c137465371c6e17673986e492a2a7c4126a806f68bb7b0",
+  "worktree_dirty": true
+}

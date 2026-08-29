@@ -12,3 +12,7 @@ inventory, retrieval provenance, FITS SHA-256 manifest, and processing/QC
 metadata. The downloaded FITS under `lightcurves/raw/` and constructed NPZ files
 under `lightcurves/processed/` are intentionally ignored because they are
 reproducible binary artifacts.
+
+`splits/` contains the deterministic Stage 3 assignment manifest, partition and
+distribution audits, summary, provenance, and checksums for paired object-level
+and host-group split strategies.

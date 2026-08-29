@@ -4,3 +4,5 @@ streamlit>=1.40,<2
 astropy>=7.0,<8
 astroquery>=0.4.9,<0.5
 matplotlib>=3.9,<4
+scikit-learn>=1.9,<2
+scipy>=1.14,<2
