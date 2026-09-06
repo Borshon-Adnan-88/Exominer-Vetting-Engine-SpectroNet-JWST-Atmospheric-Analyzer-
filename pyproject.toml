@@ -22,7 +22,7 @@ dependencies = [
 test = ["pytest>=8,<10"]
 
 [tool.setuptools.packages.find]
-include = ["exominer*", "spectronet*", "kepler_catalog*", "kepler_lightcurves*", "kepler_splits*"]
+include = ["exominer*", "spectronet*", "kepler_catalog*", "kepler_lightcurves*", "kepler_splits*", "kepler_scale*"]
 
 [tool.pytest.ini_options]
 addopts = "-ra"

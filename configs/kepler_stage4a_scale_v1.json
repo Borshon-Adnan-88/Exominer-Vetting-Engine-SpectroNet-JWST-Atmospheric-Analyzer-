@@ -1,0 +1,23 @@
+{
+  "pipeline_id": "kepler_dr25_stage4a_scale_v1",
+  "expected_inputs": {
+    "stage1_manifest": "data/manifests/kepler_q1_q17_dr25_koi_manifest.csv",
+    "stage1_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+    "stage2_config": "configs/kepler_lightcurve_preprocessing_v1.json",
+    "stage2_config_sha256": "3b444e082c16598a135c699a1f3b17af4564b247ad5fd79122587e796de96ac3",
+    "stage3_assignments": "data/splits/kepler_koi_split_assignments_v1.csv",
+    "stage3_assignments_sha256": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+    "expected_kois": 6637,
+    "expected_hosts": 5804,
+    "expected_assignment_rows": 132740
+  },
+  "source": {"archive": "MAST", "mission": "Kepler", "data_release": 25, "quarter_minimum": 1, "quarter_maximum": 17, "cadence": "long", "product_suffix": "_llc.fits"},
+  "batching": {"sort_field": "kepid", "label_blind": true},
+  "profiles": {
+    "laptop_safe": {"host_batch_size": 10, "cpu_workers": 1, "discovery_concurrency": 2, "download_concurrency": 1, "retain_raw_fits": false, "safety_margin_bytes": 2147483648},
+    "cloud_archive": {"host_batch_size": 25, "cpu_workers": 1, "discovery_concurrency": 2, "download_concurrency": 2, "retain_raw_fits": true, "safety_margin_bytes": 5368709120}
+  },
+  "retry": {"maximum_attempts": 4, "backoff_seconds": [2, 5, 15, 30], "connect_timeout_seconds": 30, "read_timeout_seconds": 120, "retry_after_cap_seconds": 120},
+  "paths": {"environment_variable": "EXOMINER_DATA_ROOT", "dataset_subdirectory": "kepler_dr25", "require_external_to_repository": true},
+  "output": {"layout": "processed/<kepid>/<kepoi_name_normalized>.npz", "canonical_per_koi": true, "little_endian": true, "deterministic_npz": true}
+}

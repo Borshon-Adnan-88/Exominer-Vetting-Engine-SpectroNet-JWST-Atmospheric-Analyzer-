@@ -118,3 +118,17 @@ split repeats for the conflict-free Stage 1 binary KOI cohort. Grouped splits
 keep every KOI sharing a `kepid` in one partition. Split assignments and audits
 contain no model training or full-cohort photometry preprocessing. See
 `docs/kepler_split_policy.md`.
+
+## Stage 4A: low-resource full-cohort pipeline
+
+Stage 4A provides one cross-platform, external-storage-aware pipeline for the
+frozen cohort. It validates source hashes, batches hosts by `kepid`, checkpoints
+MAST discovery, freezes product metadata separately from downloads, and supports
+read-only preflight capacity analysis. Large runtime data live under a CLI or
+`EXOMINER_DATA_ROOT` location. See `docs/kepler_stage4a_pipeline.md` and
+`docs/external_data_root.md`.
+
+Low-bandwidth operation additionally supports an operational-only
+`EXOMINER_SCRATCH_ROOT` and a `public_wifi` profile with one-host scheduling and
+a 100 MiB per-run transfer ceiling. These settings do not change scientific
+configuration, assignments, or canonical outputs.

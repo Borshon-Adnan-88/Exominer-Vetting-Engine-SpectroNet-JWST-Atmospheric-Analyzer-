@@ -1,0 +1,24 @@
+{
+  "array_checksum_manifest_sha256": null,
+  "built_at_utc": "2026-08-29T02:16:46.500704+00:00",
+  "discovery_outcomes_sha256": "3a09195e906f30a0676ebe7c2524f30a32c1570261cf5257d9400e875c1a55eb",
+  "environment": {
+    "astropy": "7.2.0",
+    "astroquery": "0.4.11",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.4"
+  },
+  "fits_checksum_manifest_sha256": null,
+  "git_revision": "61ec1638c8f60e6710e1bc057f157fd0b7f5d07f",
+  "mast_inventory_sha256": "f61ada37f1e2b94f54da8ec85268d5b665f7794b5e360957260809ce7fa778d0",
+  "metadata_checksums_sha256": "6540601236aff273408da85a36fa7149fd489e1d022b00fae7b4c4c3e964e301",
+  "pipeline_id": "kepler_dr25_stage4a_scale_v1",
+  "processing_manifest_sha256": null,
+  "stage1_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+  "stage2_config_sha256": "3b444e082c16598a135c699a1f3b17af4564b247ad5fd79122587e796de96ac3",
+  "stage3_assignments_sha256": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+  "stage4a_config_sha256": "a140d838b0f60c1e9fb46f882937175cfaf08655747013173623ee2b112012f8",
+  "worktree_dirty": true
+}

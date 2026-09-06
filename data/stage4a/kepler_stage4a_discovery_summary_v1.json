@@ -1,0 +1,11 @@
+{
+  "advertised_total_bytes": 38803838400,
+  "ambiguous_hosts": 0,
+  "hosts": 5804,
+  "hosts_no_products": 0,
+  "inventory_sha256": "f61ada37f1e2b94f54da8ec85268d5b665f7794b5e360957260809ce7fa778d0",
+  "operational_discovery_concurrency": 4,
+  "outcomes_sha256": "3a09195e906f30a0676ebe7c2524f30a32c1570261cf5257d9400e875c1a55eb",
+  "products": 88642,
+  "retrieval_failure_hosts": 0
+}

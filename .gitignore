@@ -17,3 +17,7 @@ data/lightcurves/processed/
 data/lightcurves/diagnostics/per_target/
 data/cache/mast/
 *.part
+*.tmp
+*.download
+stage4a-*.log
+data/stage4a_runtime/

@@ -16,3 +16,8 @@ reproducible binary artifacts.
 `splits/` contains the deterministic Stage 3 assignment manifest, partition and
 distribution audits, summary, provenance, and checksums for paired object-level
 and host-group split strategies.
+
+`stage4a/` contains compact full-cohort host rosters, discovery inventory,
+outcomes, preflight reports, and checksums. Raw FITS, canonical NPZ arrays,
+checkpoints, caches, and temporary files live outside Git under the runtime data
+root.
