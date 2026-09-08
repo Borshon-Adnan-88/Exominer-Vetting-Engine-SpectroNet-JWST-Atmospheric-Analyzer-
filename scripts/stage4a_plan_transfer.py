@@ -16,7 +16,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root")
     parser.add_argument("--scratch-root")
-    parser.add_argument("--profile", choices=["laptop_safe", "cloud_archive", "public_wifi"], default="public_wifi")
+    parser.add_argument("--profile", choices=["laptop_safe", "cloud_archive", "public_wifi", "home_wifi"], default="public_wifi")
     parser.add_argument("--max-download-bytes-per-run", type=int)
     args = parser.parse_args()
     config = load_config(); validate_inputs(config)

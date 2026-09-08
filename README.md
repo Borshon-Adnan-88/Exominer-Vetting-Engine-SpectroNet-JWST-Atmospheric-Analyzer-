@@ -132,3 +132,7 @@ Low-bandwidth operation additionally supports an operational-only
 `EXOMINER_SCRATCH_ROOT` and a `public_wifi` profile with one-host scheduling and
 a 100 MiB per-run transfer ceiling. These settings do not change scientific
 configuration, assignments, or canonical outputs.
+
+The operational-only `home_wifi` profile uses 10-host batches with one network
+and one CPU worker. FITS are staged in scratch, canonical NPZ files are retained
+under the data root, and verified raw files are not archived to cloud storage.

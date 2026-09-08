@@ -27,3 +27,6 @@ are operational only and never enter deterministic artifacts.
 
 Example public-Wi-Fi transfer plan (no download):
 `python -m scripts.stage4a_plan_transfer --data-root "G:\My Drive\exominer-data" --scratch-root "C:\exominer-scratch" --profile public_wifi`
+
+Home Wi-Fi uses the same command and roots with `--profile home_wifi`. Only the
+operational schedule changes; scientific outputs and identities do not.

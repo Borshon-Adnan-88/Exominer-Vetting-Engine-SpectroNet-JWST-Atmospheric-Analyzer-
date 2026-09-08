@@ -25,3 +25,9 @@ ceiling, and resume starts at the first host without a final verified processing
 array-checksum, and provenance state. Temporary FITS use the scratch root and are
 never copied automatically into cloud-backed data storage. Purging remains
 subject to every existing host safety gate.
+
+The `home_wifi` operational profile uses deterministic 10-host scheduling with
+one download worker and one CPU worker. Raw FITS are staged only under the
+scratch root, verified and processed there, and become purge-eligible only after
+the existing host completion, checksum, and provenance gates. Canonical NPZ
+files remain under the data root; there is no raw-FITS cloud-copy step.

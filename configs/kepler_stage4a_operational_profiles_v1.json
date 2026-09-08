@@ -27,6 +27,15 @@
       "copy_raw_to_data_root": false,
       "process_and_purge": true,
       "max_download_bytes_per_run": 104857600
+    },
+    "home_wifi": {
+      "host_batch_size": 10,
+      "cpu_workers": 1,
+      "download_concurrency": 1,
+      "retain_raw_fits": false,
+      "copy_raw_to_data_root": false,
+      "process_and_purge": true,
+      "max_download_bytes_per_run": null
     }
   }
 }
