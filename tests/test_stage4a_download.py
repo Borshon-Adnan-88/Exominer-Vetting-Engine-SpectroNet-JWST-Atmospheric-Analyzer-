@@ -14,3 +14,17 @@ def test_retry_exhaustion_never_exposes_final_file(tmp_path,monkeypatch):
  monkeypatch.setattr("kepler_scale.download.Observations.download_file",short)
  with pytest.raises(DownloadError,match="retry_exhausted"): download_atomic("mast:x",tmp_path/"x.fits",4,c)
  assert not (tmp_path/"x.fits").exists() and not (tmp_path/"x.fits.part").exists()
+
+def test_atomic_download_recreates_missing_host_directory_before_retry(tmp_path,monkeypatch):
+ c=load_config(); c["retry"]["backoff_seconds"]=[0,0,0,0]; destination=tmp_path/"raw_fits"/"3445812"/"x.fits"; calls=0
+ def flaky(uri,local_path,cache):
+  nonlocal calls
+  calls += 1
+  path=Path(local_path); assert path.parent.is_dir()
+  if calls == 1:
+   path.parent.rmdir()
+   raise OSError("simulated directory loss")
+  path.write_bytes(b"data"); return "COMPLETE"
+ monkeypatch.setattr("kepler_scale.download.Observations.download_file",flaky)
+ result=download_atomic("mast:x",destination,4,c)
+ assert calls==2 and destination.read_bytes()==b"data" and result["attempts"]==2

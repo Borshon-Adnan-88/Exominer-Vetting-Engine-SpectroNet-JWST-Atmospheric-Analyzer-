@@ -3,7 +3,39 @@ from types import SimpleNamespace
 import numpy as np,pandas as pd
 from kepler_scale.contracts import load_config
 from kepler_scale.operations import get_operational_profile
-from kepler_scale.runner import run_batch
+import pytest
+from kepler_scale.download import DownloadError
+from kepler_scale.runner import _ensure_host_products, run_batch, run_host
+
+def source_inventory(rows):
+ return pd.DataFrame([{"kepid":42,"quarter":number+1,"product_filename":name,"data_uri":f"mast:{name}","product_size":len(payload),"expected_sha256":__import__('hashlib').sha256(payload).hexdigest()} for number,(name,payload) in enumerate(rows)])
+
+def test_partial_host_download_fetches_only_missing_product(tmp_path,monkeypatch):
+ raw=tmp_path/"42"; raw.mkdir(); existing=b"one"; missing=b"two"; (raw/"one.fits").write_bytes(existing); calls=[]; inventory=source_inventory([("one.fits",existing),("two.fits",missing)])
+ def fetch(uri,destination,expected_size,config): calls.append(uri); destination.write_bytes(missing); return {"bytes":expected_size,"sha256":__import__('hashlib').sha256(missing).hexdigest(),"attempts":1}
+ monkeypatch.setattr("kepler_scale.runner.download_atomic",fetch); _ensure_host_products(raw,inventory,load_config())
+ assert calls==["mast:two.fits"]
+
+def test_preprocessing_cannot_start_with_incomplete_host_set(tmp_path,monkeypatch):
+ data=SimpleNamespace(root=tmp_path/"data",cache=tmp_path/"data"/"cache",temporary=tmp_path/"data"/"temporary"); scratch=SimpleNamespace(raw_fits=tmp_path/"scratch"/"raw_fits")
+ inventory=source_inventory([("missing.fits",b"data")]); called=False
+ monkeypatch.setattr("kepler_scale.runner.download_atomic",lambda *args,**kwargs:{"bytes":4,"sha256":"x","attempts":1})
+ def read(*args,**kwargs):
+  nonlocal called; called=True
+ monkeypatch.setattr("kepler_scale.runner.read_kepler_quarter",read)
+ with pytest.raises(DownloadError,match="source set incomplete"): run_host(42,inventory,pd.DataFrame(),load_config(),get_operational_profile("home_wifi"),data,scratch,False)
+ assert not called
+
+def test_stale_part_only_does_not_count_as_complete(tmp_path,monkeypatch):
+ raw=tmp_path/"42"; raw.mkdir(); payload=b"data"; (raw/"x.fits.part").write_bytes(payload); calls=[]; inventory=source_inventory([("x.fits",payload)])
+ def fetch(uri,destination,expected_size,config): calls.append(uri); destination.with_name(destination.name+".part").unlink(); destination.write_bytes(payload); return {"bytes":4,"sha256":__import__('hashlib').sha256(payload).hexdigest(),"attempts":1}
+ monkeypatch.setattr("kepler_scale.runner.download_atomic",fetch); _ensure_host_products(raw,inventory,load_config())
+ assert calls==["mast:x.fits"] and (raw/"x.fits").is_file() and not (raw/"x.fits.part").exists()
+
+def test_verified_existing_product_is_not_redownloaded(tmp_path,monkeypatch):
+ raw=tmp_path/"42"; raw.mkdir(); payload=b"data"; (raw/"x.fits").write_bytes(payload); inventory=source_inventory([("x.fits",payload)])
+ monkeypatch.setattr("kepler_scale.runner.download_atomic",lambda *args,**kwargs:pytest.fail("verified file was re-downloaded")); ready=_ensure_host_products(raw,inventory,load_config())
+ assert ready[0][2]["attempts"]==0
 
 def test_batch_runner_uses_scratch_writes_data_purges_and_resumes(tmp_path,monkeypatch,kepler_fits_factory):
  data=SimpleNamespace(root=tmp_path/"data",processed=tmp_path/"data"/"processed",cache=tmp_path/"data"/"cache",temporary=tmp_path/"data"/"temporary",raw_fits=tmp_path/"data"/"raw_fits"); scratch=SimpleNamespace(root=tmp_path/"scratch",raw_fits=tmp_path/"scratch"/"raw_fits",temporary=tmp_path/"scratch"/"temporary")
