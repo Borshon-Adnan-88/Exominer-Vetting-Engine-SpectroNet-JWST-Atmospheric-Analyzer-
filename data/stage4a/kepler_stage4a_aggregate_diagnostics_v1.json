@@ -1,0 +1,143 @@
+{
+  "constructed_denominator": 6637,
+  "distributions": {
+    "global_interpolation_fraction": {
+      "max": 0.6619999999999999,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "global_observed_fraction": {
+      "max": 1.0,
+      "median": 1.0,
+      "min": 0.338,
+      "p05": 1.0,
+      "p95": 1.0
+    },
+    "local_interpolation_fraction": {
+      "max": 0.815,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.20499999999999996
+    },
+    "local_observed_fraction": {
+      "max": 1.0,
+      "median": 1.0,
+      "min": 0.185,
+      "p05": 0.795,
+      "p95": 1.0
+    },
+    "maximum_quarter_boundary_jump": {
+      "max": 1.454437493677319,
+      "median": 0.0010673703562071868,
+      "min": 0.0,
+      "p05": 0.0001861059414301369,
+      "p95": 0.02691143673761743
+    },
+    "observed_transit_epochs": {
+      "max": 4448.0,
+      "median": 166.0,
+      "min": 2.0,
+      "p05": 6.0,
+      "p95": 1828.1999999999998
+    },
+    "sap_pdcsap_morphology_difference_fraction": {
+      "max": 569.6785714285714,
+      "median": 0.24752163650668765,
+      "min": 0.0,
+      "p05": 0.004545216296295299,
+      "p95": 2.717271456697006
+    },
+    "temporal_baseline_fraction": {
+      "max": 1.0,
+      "median": 1.0,
+      "min": 0.9972432037373893,
+      "p05": 0.9998274974424071,
+      "p95": 1.0
+    },
+    "valid_cadences": {
+      "max": 64814.0,
+      "median": 64793.0,
+      "min": 1284.0,
+      "p05": 30542.0,
+      "p95": 64798.0
+    }
+  },
+  "failure_status_counts": {
+    "constructed_qc_fail": 283,
+    "constructed_qc_pass": 6354
+  },
+  "flags": {
+    "phase_inversion_flag": 145,
+    "sap_pdcsap_material_difference_flag": 3648,
+    "strong_quarter_discontinuity_flag": 1127,
+    "unusually_high_interpolation_flag": 344,
+    "visibly_miscentered_flag": 605
+  },
+  "qc_reason_frequency": {
+    "global_coverage_below_0.80": 36,
+    "global_missing_run_above_0.10": 10,
+    "local_missing_run_above_0.25": 27,
+    "observed_transit_epochs_below_3": 2,
+    "valid_quarters_below_8": 231
+  },
+  "quarter_product_host_counts": {
+    "1": 4690,
+    "2": 4975,
+    "3": 4976,
+    "4": 5351,
+    "5": 5251,
+    "6": 5051,
+    "7": 5093,
+    "8": 5317,
+    "9": 5319,
+    "10": 5188,
+    "11": 5208,
+    "12": 5431,
+    "13": 5429,
+    "14": 5214,
+    "15": 5248,
+    "16": 5457,
+    "17": 5444
+  },
+  "quarter_valid_koi_counts": {
+    "1": 5429,
+    "2": 5738,
+    "3": 5736,
+    "4": 6153,
+    "5": 6032,
+    "6": 5826,
+    "7": 5855,
+    "8": 6098,
+    "9": 6100,
+    "10": 5967,
+    "11": 5970,
+    "12": 6220,
+    "13": 6220,
+    "14": 5999,
+    "15": 6020,
+    "16": 6247,
+    "17": 6236
+  },
+  "valid_quarters_per_koi": {
+    "1": 45,
+    "2": 68,
+    "3": 18,
+    "4": 33,
+    "5": 10,
+    "6": 31,
+    "7": 26,
+    "8": 141,
+    "9": 54,
+    "10": 44,
+    "11": 99,
+    "12": 31,
+    "13": 231,
+    "14": 1279,
+    "15": 47,
+    "16": 228,
+    "17": 4252
+  }
+}

@@ -6,6 +6,7 @@ from kepler_scale.operations import get_operational_profile
 import pytest
 from kepler_scale.download import DownloadError
 from kepler_scale.runner import _ensure_host_products, run_batch, run_host
+from kepler_scale.runner import _host_lock
 
 def source_inventory(rows):
  return pd.DataFrame([{"kepid":42,"quarter":number+1,"product_filename":name,"data_uri":f"mast:{name}","product_size":len(payload),"expected_sha256":__import__('hashlib').sha256(payload).hexdigest()} for number,(name,payload) in enumerate(rows)])
@@ -46,3 +47,25 @@ def test_batch_runner_uses_scratch_writes_data_purges_and_resumes(tmp_path,monke
  roster=pd.DataFrame({"kepid":[42],"host_order":[0],"batch_id":["batch-00000"]}); inventory=pd.DataFrame({"kepid":[42],"quarter":[1],"product_filename":[source.name],"data_uri":["mast:x"],"product_size":[size]}); cohort=pd.DataFrame({"source_row_index":[1],"kepid":[42],"kepoi_name":["K00042.01"],"label":[1],"koi_period":[2.0],"koi_time0bk":[100.0],"koi_duration":[3.0]}); scientific=json.load(open("configs/kepler_lightcurve_preprocessing_v1.json")); scientific["retry"]=load_config()["retry"]
  first=run_batch("batch-00000",roster,inventory,cohort,scientific,get_operational_profile("home_wifi"),data,scratch); assert first["canonical_npz_count"]==1 and first["purged_hosts"]==1 and not list(scratch.raw_fits.rglob("*.fits"))
  second=run_batch("batch-00000",roster,inventory,cohort,scientific,get_operational_profile("home_wifi"),data,scratch); assert second["resumed_hosts"]==1 and second["downloaded_bytes"]==0
+
+
+def test_host_lock_rejects_overlapping_writer_and_releases(tmp_path):
+ data=SimpleNamespace(cache=tmp_path/"cache")
+ with _host_lock(data,42):
+  with pytest.raises(RuntimeError,match="already being processed"):
+   with _host_lock(data,42): pytest.fail("second writer entered")
+ with _host_lock(data,42): pass
+
+
+def test_resume_reconciles_post_purge_residue_without_deleting_or_downloading(tmp_path,monkeypatch):
+ data=SimpleNamespace(root=tmp_path/"data",cache=tmp_path/"data"/"cache")
+ scratch=SimpleNamespace(raw_fits=tmp_path/"scratch"/"raw_fits")
+ raw=scratch.raw_fits/"42"; raw.mkdir(parents=True); evidence=raw/"retained_llc.fits"; evidence.write_bytes(b"retain for audit")
+ state={"kepid":42,"all_kois_final":True,"array_checksums_verified":True,"provenance_written":True,"raw_purged":True,"koi_outcomes":[]}
+ state_path=data.cache/"host_state"/"000000042.json"; state_path.parent.mkdir(parents=True); state_path.write_text(json.dumps(state))
+ monkeypatch.setattr("kepler_scale.runner.download_atomic",lambda *a,**k:pytest.fail("resume downloaded"))
+ result,metric=run_host(42,pd.DataFrame(),pd.DataFrame(),{},get_operational_profile("home_wifi"),data,scratch,True)
+ assert result["raw_purged"] is False and metric["resumed_skip"]
+ assert result["raw_retention_reason"]=="residual_sources_detected_on_resume_requires_review"
+ assert evidence.read_bytes()==b"retain for audit"
+ assert json.loads(state_path.read_text())["raw_purged"] is False

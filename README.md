@@ -136,3 +136,10 @@ configuration, assignments, or canonical outputs.
 The operational-only `home_wifi` profile uses 10-host batches with one network
 and one CPU worker. FITS are staged in scratch, canonical NPZ files are retained
 under the data root, and verified raw files are not archived to cloud storage.
+
+The completed Stage 4A cohort has 6,637 independently verified canonical NPZ
+files. The FITS checksum discrepancy was traced to Astropy's handling of
+CHECKSUM-only headers; raw-byte checksum checks and eight fresh MAST comparisons
+passed. See the [validation policy](docs/kepler_stage4a_validation_policy.md) and
+[certification report](docs/kepler_stage4a_certification_report.md) for evidence,
+final hashes, QC warnings, and retained-source accounting. Stage 4B has not started.

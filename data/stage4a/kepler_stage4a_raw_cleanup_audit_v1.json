@@ -1,0 +1,86 @@
+{
+  "dataset_raw_or_partial_files": 0,
+  "partial_files": 0,
+  "policy": "Retain the 11 original FITS as integrity evidence; no deletion. Temporary fresh sample is separately retained as audit evidence outside dataset and scratch.",
+  "remaining_files": [
+    {
+      "bytes": 466560,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2010355172524_llc.fits",
+      "root": "scratch",
+      "sha256": "05a9c99b6df4ba195f2375546b9734066b1525d6eea43c7bff533105fdda0e62"
+    },
+    {
+      "bytes": 357120,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2011073133259_llc.fits",
+      "root": "scratch",
+      "sha256": "c61e86f98b6915dd94685e3e1ad39d42d4774d4b8656b49d9af19d5418f85781"
+    },
+    {
+      "bytes": 506880,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2011177032512_llc.fits",
+      "root": "scratch",
+      "sha256": "bfd3f3a5444106d0d5690f9137bc2925dcdc06a25148b52755447577c5e81f57"
+    },
+    {
+      "bytes": 486720,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2011271113734_llc.fits",
+      "root": "scratch",
+      "sha256": "c638f21100e4bd3e9d85c9cf901028257084690d49f95608f0455d179839b254"
+    },
+    {
+      "bytes": 506880,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2012004120508_llc.fits",
+      "root": "scratch",
+      "sha256": "8ebce3dfbc86fc583978f544899fd678e82ea27e4554d4c5fdd620f3bec210e9"
+    },
+    {
+      "bytes": 434880,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2012088054726_llc.fits",
+      "root": "scratch",
+      "sha256": "fef260659dce81a4ac1b3d406c5ce7d0488f173b4d5c78e4888ab291cf896340"
+    },
+    {
+      "bytes": 472320,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2012179063303_llc.fits",
+      "root": "scratch",
+      "sha256": "de0ea02141173491417786a4158486a3f69876900e064ba4882a215985b228f0"
+    },
+    {
+      "bytes": 506880,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2012277125453_llc.fits",
+      "root": "scratch",
+      "sha256": "0c5a104a5e532b742a9068f0e43b166998a087ac770ff752265619a2519ebfd5"
+    },
+    {
+      "bytes": 506880,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2013011073258_llc.fits",
+      "root": "scratch",
+      "sha256": "659cebbb0462fa4770b3a5296994228915c5aa2e6df4c119b890d2003fbc0e66"
+    },
+    {
+      "bytes": 449280,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2013098041711_llc.fits",
+      "root": "scratch",
+      "sha256": "78899fcbe717a0c1294072aee1ec449a4e88383788a2b13500c78438315fab5b"
+    },
+    {
+      "bytes": 187200,
+      "reason": "preserved_integrity_audit_evidence_post_purge_writes",
+      "relative_path": "raw_fits/3530668/kplr003530668-2013131215648_llc.fits",
+      "root": "scratch",
+      "sha256": "466ccbddd0def4a23ee31e5bf2292319dc5cfb6b0f9e83373b448f15c927cdcb"
+    }
+  ],
+  "scratch_fits_bytes": 4881600,
+  "scratch_fits_files": 11
+}

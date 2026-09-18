@@ -1,0 +1,41 @@
+{
+  "artifacts_sha256": {
+    "kepler_stage4a_aggregate_diagnostics_v1.json": "68a1b7fd37825231a5ce67a1d2f98ca3bfc34a39d2f22a3a5ec4ff9bfadc2ffa",
+    "kepler_stage4a_array_checksums_v1.sha256": "ae2e667e4768c4a1a5d047c95c29f607ed00f3ea47ef910cf2fc8480cc5c157b",
+    "kepler_stage4a_array_index_v1.csv": "a647925a26b869519b5dce47c17e40e8e256e0d7cb9eb2e5e3c3b71bfd77ed09",
+    "kepler_stage4a_attrition_report_v1.csv": "770d088e1248004fbd1a9648e235a799731f3eed936291209a32da58de9f93f2",
+    "kepler_stage4a_attrition_summary_v1.json": "ce82091a0622d95e507352b4c623fa340785ed322c5f73fe2241777b7642f5ae",
+    "kepler_stage4a_fits_checksums_v1.sha256": "a832ea9c39f6a11cc85b49efe1eb20a20ddd19fe834026509e86f7e41cc3590d",
+    "kepler_stage4a_fits_manifest_v1.csv": "514a3a2c7a3b311b5ec07811cb1478fca07604d00a1238441f10f2b646eaa5fa",
+    "kepler_stage4a_host_outcomes_v1.csv": "79bdc3f58fb1598e192328304abaf9676576d0a6e1890a14ee394ae1b84d04d9",
+    "kepler_stage4a_processing_manifest_v1.csv": "0290763f6c9855df96aa7576ef0da37cdd28eb19d9585e0ee9479064874c8dc6",
+    "kepler_stage4a_raw_cleanup_audit_v1.json": "9e14d90e4c1a9349798c4380c0dec767cc3f776ac3d4433ecd556dfcf62f9d67",
+    "kepler_stage4a_runtime_metadata_checksums_v1.sha256": "b25f231033c04627a06180f131293171ea3edbd77b791d2498f904d283a31cde",
+    "kepler_stage4a_summary_v1.json": "42ae973fd8b772777b21785fe48c82fa012630eb6f6a9c0961eb3af3e4a7b5bb"
+  },
+  "audit_dependencies_sha256": {
+    "data/stage4a/kepler_stage4a_integrity_audit_v1.json": "a9ac8869efe2ba679df6c323f54aba13fc1ea3673aacfcfd3c762d214773deb7",
+    "docs/kepler_stage4a_validation_policy.md": "d6f86bca2c17ce6b3a6c34c3d089a02d87e8c1057533c213d3e95cb5bf0eb0e2",
+    "kepler_scale/finalize.py": "067d312d72d67360e592a1640d3b4db3696c7f9817597bb82007829a76e467d6",
+    "kepler_scale/integrity.py": "b917d4083550e600022c6e132e782daa63ba7c25c3c89f80ba09fedb84a5d098",
+    "kepler_scale/runner.py": "2cc3ace4e94d5edee81b69d88211e5165c2924e316afe4054ef9902006523ef4",
+    "scripts/stage4a_audit_integrity.py": "5c16e8d7b2c8423e111e78d52db1a37e2b0c31352576ac810851f936ef6db647",
+    "scripts/stage4a_certify.py": "f1c53a4a8f2c99451d88c8acefe21614251f2aa9d39b5d6baac3d8d794e560d4"
+  },
+  "frozen_inputs": {
+    "assignment_rows": 132740,
+    "hosts": 5804,
+    "kois": 6637,
+    "mast_inventory_sha256": "f61ada37f1e2b94f54da8ec85268d5b665f7794b5e360957260809ce7fa778d0",
+    "stage1_manifest_sha256": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+    "stage2_config_sha256": "3b444e082c16598a135c699a1f3b17af4564b247ad5fd79122587e796de96ac3",
+    "stage3_assignments_sha256": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+    "stage4a_config_sha256": "a140d838b0f60c1e9fb46f882937175cfaf08655747013173623ee2b112012f8"
+  },
+  "limits": "Eight fresh products are sampled, not a fresh verification of all purged FITS; historical hashes were measured at retrieval, not archive-published SHA-256 values.",
+  "model_code_introduced": false,
+  "pipeline_id": "kepler_dr25_stage4a_scale_v1",
+  "stage4b_started": false,
+  "state_and_batch_checksums": "kepler_stage4a_runtime_metadata_checksums_v1.sha256",
+  "status": "certified_with_documented_warnings"
+}

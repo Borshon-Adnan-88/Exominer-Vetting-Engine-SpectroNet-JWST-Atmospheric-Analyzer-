@@ -1,0 +1,57 @@
+{
+  "batches": 581,
+  "canonical_npz_bytes": 141102620,
+  "canonical_npz_count": 6637,
+  "certification_status": "certified_with_documented_warnings",
+  "diagnostic_flags": {
+    "phase_inversion_flag": 145,
+    "sap_pdcsap_material_difference_flag": 3648,
+    "strong_quarter_discontinuity_flag": 1127,
+    "unusually_high_interpolation_flag": 344,
+    "visibly_miscentered_flag": 605
+  },
+  "download_bytes_caveat": "Surviving reports can overwrite earlier attempts on resume; cumulative network transfer is not recoverable from these reports.",
+  "downloaded_bytes_in_surviving_batch_reports": 35954003520,
+  "fits_products_processed": 88642,
+  "fresh_audit_download_bytes": 1794240,
+  "fresh_source_comparisons": 8,
+  "hosts": 5804,
+  "independent_raw_checksum_unique_products": 17,
+  "kois_assigned": 6637,
+  "legacy_embedded_checksum_false_products": 88642,
+  "model_data_available_false": 0,
+  "model_data_available_true": 6637,
+  "model_data_definition": "A verified constructible array exists; QC-fail arrays remain available under frozen Stage 2 policy. This is not a model-selection decision.",
+  "no_product_hosts": 0,
+  "pipeline_id": "kepler_dr25_stage4a_scale_v1",
+  "source_integrity_resolution": "Astropy 7.2.0 assumes zero data checksum when DATASUM is absent; independent raw HDU sums pass on all audited sources.",
+  "technical_outcomes": {
+    "constructed_qc_fail": 283,
+    "constructed_qc_pass": 6354,
+    "hard_preprocessing_failure": 0,
+    "invalid_source_product": 0,
+    "no_archive_product": 0,
+    "other_technical_failure": 0,
+    "retrieval_failure": 0
+  },
+  "unique_fits_bytes_processed": 38803838400,
+  "verification": {
+    "absolute_path_audit": "passed",
+    "deterministic_npz_reserialization": 6637,
+    "failed_kois_replaced": 0,
+    "kois_moved_partition": 0,
+    "logical_array_hashes": 39822,
+    "metadata_rebuild": "byte_identical",
+    "missing_duplicate_or_orphan_npz": 0,
+    "npz_sha256": 6637,
+    "shape_dtype_contract": "passed",
+    "stage3_assignments_unchanged": true
+  },
+  "warnings": [
+    "Historical embedded_checksums_valid=false records are preserved, not rewritten as individually reverified FITS.",
+    "Raw-source certification combines the frozen inventory, retrieval-time SHA-256/size/identity records, and bounded fresh-byte evidence; purged FITS were not all re-downloaded.",
+    "283 constructed QC failures remain available; frozen pilot flags are not exclusions.",
+    "Phase centering, SAP/PDCSAP differences and quarter discontinuities are review flags, not silently corrected or excluded.",
+    "Eleven original scratch FITS are intentionally retained; host 3530668 purge state is reconciled."
+  ]
+}

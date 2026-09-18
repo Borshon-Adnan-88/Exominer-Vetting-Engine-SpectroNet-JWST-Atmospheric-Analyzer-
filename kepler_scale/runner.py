@@ -6,6 +6,7 @@ import json
 import shutil
 import time
 import tracemalloc
+from contextlib import contextmanager
 from pathlib import Path
 
 import numpy as np
@@ -88,10 +89,53 @@ def _ensure_host_products(raw_dir: Path, products: pd.DataFrame, scientific_conf
     return ready
 
 
+@contextmanager
+def _host_lock(data_paths, kepid: int):
+    """One writer per host, including download and purge; OS releases on crash.
+
+    Keep the lock file: unlinking it would permit two different lock identities.
+    Contenders fail before checking state or touching any source/array files.
+    """
+    import os
+    path = data_paths.cache / "host_locks" / f"{kepid:09d}.lock"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a+b") as handle:
+        if path.stat().st_size == 0:
+            handle.write(b"\0"); handle.flush()
+        handle.seek(0)
+        try:
+            if os.name == "nt":
+                import msvcrt
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError as exc:
+            raise RuntimeError(f"host {kepid} is already being processed") from exc
+        try:
+            yield
+        finally:
+            handle.seek(0)
+            if os.name == "nt":
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
 def run_host(kepid: int, products: pd.DataFrame, kois: pd.DataFrame, scientific_config: dict, operational_config: dict, data_paths, scratch_paths, purge: bool, deterministic_rebuild: bool = False) -> tuple[dict, dict]:
+    with _host_lock(data_paths, kepid):
+        return _run_host_unlocked(kepid, products, kois, scientific_config, operational_config, data_paths, scratch_paths, purge, deterministic_rebuild)
+
+
+def _run_host_unlocked(kepid: int, products: pd.DataFrame, kois: pd.DataFrame, scientific_config: dict, operational_config: dict, data_paths, scratch_paths, purge: bool, deterministic_rebuild: bool = False) -> tuple[dict, dict]:
     prior = _load_state(data_paths, kepid)
-    if _state_is_complete(prior, data_paths): return prior, {"resumed_skip": True, "download_seconds": 0.0, "processing_seconds": 0.0}
     raw_dir = raw_download_root(operational_config, data_paths, scratch_paths) / str(kepid)
+    if _state_is_complete(prior, data_paths):
+        if prior.get("raw_purged") and raw_dir.exists() and any(p.is_file() for p in raw_dir.rglob("*")):
+            prior["raw_purged"] = False
+            prior["raw_retention_reason"] = "residual_sources_detected_on_resume_requires_review"
+            atomic_json(_host_state_path(data_paths, kepid), prior)
+        return prior, {"resumed_skip": True, "download_seconds": 0.0, "processing_seconds": 0.0}
     raw_dir.mkdir(parents=True, exist_ok=True)
     fits_records=[]; retry_count=0; downloaded_bytes=0; download_started=time.perf_counter()
     ready_products=_ensure_host_products(raw_dir,products,scientific_config,prior)

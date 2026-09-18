@@ -1,0 +1,285 @@
+{
+  "assignment_row_denominator": 132740,
+  "by_dimension": {
+    "host_multiplicity": [
+      {
+        "host_multiplicity": "multiple",
+        "model_data_available": true,
+        "rows": 520,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "host_multiplicity": "multiple",
+        "model_data_available": true,
+        "rows": 27380,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "host_multiplicity": "single",
+        "model_data_available": true,
+        "rows": 5140,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "host_multiplicity": "single",
+        "model_data_available": true,
+        "rows": 99700,
+        "technical_status": "constructed_qc_pass"
+      }
+    ],
+    "label": [
+      {
+        "label": 0,
+        "model_data_available": true,
+        "rows": 4940,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "label": 0,
+        "model_data_available": true,
+        "rows": 74320,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "label": 1,
+        "model_data_available": true,
+        "rows": 720,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "label": 1,
+        "model_data_available": true,
+        "rows": 52760,
+        "technical_status": "constructed_qc_pass"
+      }
+    ],
+    "partition": [
+      {
+        "model_data_available": true,
+        "partition": "test",
+        "rows": 828,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "partition": "test",
+        "rows": 19047,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "partition": "train",
+        "rows": 3991,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "partition": "train",
+        "rows": 88966,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "partition": "validation",
+        "rows": 841,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "partition": "validation",
+        "rows": 19067,
+        "technical_status": "constructed_qc_pass"
+      }
+    ],
+    "period_stratum": [
+      {
+        "model_data_available": true,
+        "period_stratum": "0_to_lt10_days",
+        "rows": 4120,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "period_stratum": "0_to_lt10_days",
+        "rows": 72940,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "period_stratum": "100_days_or_more",
+        "rows": 320,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "period_stratum": "100_days_or_more",
+        "rows": 10600,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "period_stratum": "10_to_lt100_days",
+        "rows": 1220,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "period_stratum": "10_to_lt100_days",
+        "rows": 43540,
+        "technical_status": "constructed_qc_pass"
+      }
+    ],
+    "repeat_id": [
+      {
+        "model_data_available": true,
+        "repeat_id": 0,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 0,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 1,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 1,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 2,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 2,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 3,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 3,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 4,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 4,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 5,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 5,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 6,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 6,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 7,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 7,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 8,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 8,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 9,
+        "rows": 566,
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "repeat_id": 9,
+        "rows": 12708,
+        "technical_status": "constructed_qc_pass"
+      }
+    ],
+    "strategy": [
+      {
+        "model_data_available": true,
+        "rows": 2830,
+        "strategy": "host_group_stratified",
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "rows": 63540,
+        "strategy": "host_group_stratified",
+        "technical_status": "constructed_qc_pass"
+      },
+      {
+        "model_data_available": true,
+        "rows": 2830,
+        "strategy": "object_stratified",
+        "technical_status": "constructed_qc_fail"
+      },
+      {
+        "model_data_available": true,
+        "rows": 63540,
+        "strategy": "object_stratified",
+        "technical_status": "constructed_qc_pass"
+      }
+    ]
+  },
+  "counting_note": "Assignment marginals repeat KOIs across 2 strategies and 10 repeats; each strategy/repeat retains 6637 assignments.",
+  "host_multiplicity_definition": "Number of Stage 1 binary-cohort KOIs per kepid: single=1, multiple>=2",
+  "period_stratum_definition": "Descriptive audit bins only: (0,10), [10,100), [100,infinity) days, invalid/missing separate; no selection or split changes.",
+  "unique_koi_denominator": 6637
+}
