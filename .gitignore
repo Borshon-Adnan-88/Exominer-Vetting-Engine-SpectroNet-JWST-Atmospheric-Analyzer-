@@ -22,3 +22,4 @@ data/cache/mast/
 stage4a-*.log
 data/stage4a_runtime/
 data/stage4b_runtime/
+data/stage5_runtime/

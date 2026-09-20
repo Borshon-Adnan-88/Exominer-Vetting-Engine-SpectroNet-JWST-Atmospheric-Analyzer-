@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tests": 6,
+  "synthetic_scientific_fits": 0,
+  "model_source_sha256": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+  "test_source_sha256": "9e9074297ef0a93e04442dfcb5e18ffd76bf681a30727038dd908c0bc9d20a45",
+  "junit_sha256": "9a9c7270f45d2c75bec4616af60da0f74f809cf3645f996302d436e9b8ab5507",
+  "warnings": "Dependency DeprecationWarnings from gast and Keras; no determinism or numerical failures."
+}

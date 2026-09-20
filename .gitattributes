@@ -5,3 +5,11 @@
 /kepler_baselines/** -text
 /scripts/stage4b* -text
 /tests/test_stage4b* -text
+# Preserve certified Stage 5 bytes; existing CRLF and LF files stay unchanged.
+/configs/kepler_stage5* -text
+/data/stage5/** -text
+/data/stage5_infrastructure/** -text
+/docs/kepler_stage5* -text
+/kepler_cnn/** -text
+/scripts/stage5* -text
+/tests/test_stage5* -text

@@ -164,3 +164,14 @@ run is reported explicitly and is not treated as a completed experiment.
 The Streamlit similarity score remains the original synthetic heuristic and is
 unrelated to these trained classifiers. No model integration into the app,
 CNN, Stage 5 or TESS processing is included.
+
+## Stage 5: dual-view CNN experiment
+
+The approved CNN experiment uses the same frozen cohort, arrays and paired
+splits as Stage 4B. Its separate global/local flux branches and fixed training
+policy are described in [the Stage 5 specification](docs/kepler_stage5_cnn.md).
+Completion requires all 20 fits, saved-model replay and offline checks; consult
+`data/stage5/provenance.json` for the actual status. Models and predictions live
+in ignored `data/stage5_runtime/`. The Streamlit application remains synthetic.
+The [Stage 5 report](docs/kepler_stage5_report.md) records all 20 fit outcomes,
+baseline comparisons, numerical diagnostics, replay verification and hashes.

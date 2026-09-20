@@ -1,0 +1,12 @@
+{
+  "absolute_tolerance": 1e-07,
+  "labels_identical": true,
+  "maximum_probability_error": 0.0,
+  "metrics_recomputed": 120,
+  "models": 20,
+  "new_fits": 0,
+  "predictions": 132740,
+  "relative_tolerance": 0,
+  "runtime_seconds": 145.13284799999383,
+  "status": "passed"
+}

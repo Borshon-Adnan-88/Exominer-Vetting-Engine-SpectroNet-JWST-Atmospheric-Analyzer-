@@ -1,0 +1,33 @@
+{
+  "calibration_rows_recomputed": 1200,
+  "canonical_arrays": "prior passed post-training 6637-file hash audit reused",
+  "comparison_rows_verified": 1920,
+  "corrective_reruns": 0,
+  "epoch_caps": 1,
+  "existing_runtime_manifest_sha256": "87887a9fbdce7fcf17feb68d3618688f4d36eebcdcbcc974459c53e3cbedd7fc",
+  "finalizer_sha256": "420afc4d9d5548f0268df0fe760bef767c3dc1670761aac263dfc2d5b84103c2",
+  "frozen_metadata_and_stage4b_outputs": "hashes unchanged",
+  "git_diff_check": "passed",
+  "histories_verified": 20,
+  "lower_auc_than_baseline_counts": {
+    "logistic_regression": 20,
+    "random_forest": 20
+  },
+  "metric_rows_recomputed": 120,
+  "object_minus_grouped_test_roc_auc": 0.008867694450511188,
+  "prediction_rows_verified": 132740,
+  "primary_test_roc_auc_means": {
+    "host_group_stratified": 0.6002900905844668,
+    "object_stratified": 0.609157785034978
+  },
+  "prior_provenance_sha256": "beb7dd8873219ac5b151ec358b5f7dfebec74b4e42393b6e384686e740b05eee",
+  "probability_range_below_1e_minus_7": 4,
+  "replay_evidence": "20 models; 132740 probabilities; zero difference; replay not rerun",
+  "runs_excluded_or_corrected": 0,
+  "runtime_artifacts_verified": 80,
+  "scientific_fits": 20,
+  "scope": "Existing-artifact consistency and bookkeeping only; no TensorFlow, training, model replay, tests or NPZ re-audit executed.",
+  "status": "certified",
+  "test_evidence": "140 passed; 3 network tests deselected; suite not rerun",
+  "two_or_three_probability_values": 7
+}

@@ -1,0 +1,1087 @@
+{
+  "completed_fits": 20,
+  "new_fits_this_invocation": 20,
+  "runs": [
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1176.5272103000025,
+      "fit_seconds": 1160.2486580999976,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 0,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "eb13ae73310c93db3eedd90e01f1f26c8fcb55a917eea681db5938100d17d8af",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 71,
+        "best_validation_loss": 0.5760892629623413,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 81
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-00",
+      "seed": 1729,
+      "sha256": {
+        "history.csv": "7d5c68d927b56bd56193a64e36b55816b623586245a067287c8b533d13bca4bc",
+        "model.keras": "1efc2dda4b7f8fb847076ad11eed548329d1b40fb26835ea0295a7d4867ffb6b",
+        "predictions.csv": "48b50893c63e950b8378188d4b7da6fd1ec3bb680994258ec2f732a870500755"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 950.1511623999977,
+      "fit_seconds": 932.6667828000063,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 0,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "eb13ae73310c93db3eedd90e01f1f26c8fcb55a917eea681db5938100d17d8af",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 68,
+        "best_validation_loss": 0.5630370378494263,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 78
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-00",
+      "seed": 1729,
+      "sha256": {
+        "history.csv": "a9b5b08a9dcc96389852f58ae63421d79b420439cf3035e62a859153817f320e",
+        "model.keras": "b602bf008ca0c3e0757737ecabea91457554d6fcb07b10bb282cc04223861264",
+        "predictions.csv": "6ec20c0af513f2e400b93d673f2d295131b0208f6194130b4c643d48ce6f66ed"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 493.9948768000031,
+      "fit_seconds": 477.15073629999824,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 1,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "2511412ce4b95e375831b24f501e94bfb932472dcbfd9562f86dc8fbc70975a9",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 28,
+        "best_validation_loss": 0.5808209776878357,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 38
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-01",
+      "seed": 2718,
+      "sha256": {
+        "history.csv": "3ce01c75899f479f796583bf6f2960f694d27eb4321ac9b53ebb4764596c113b",
+        "model.keras": "26fb6817948f884d546ee073cdc3f38941a1937bf9b8123f39d2f3797327f62a",
+        "predictions.csv": "8cfeebc885d3971fb3bc675341a8ea8e5e122cd0ecfa9315d40b78c274e265f7"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 667.3127361999941,
+      "fit_seconds": 650.1688246999984,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 1,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "2511412ce4b95e375831b24f501e94bfb932472dcbfd9562f86dc8fbc70975a9",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 43,
+        "best_validation_loss": 0.5694620609283447,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 53
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-01",
+      "seed": 2718,
+      "sha256": {
+        "history.csv": "724149d3094a78902da5cb8487ca8a6daf9e9f6958b08d8677ec76702f12e6de",
+        "model.keras": "4ee7fa185485e42ff903ae4fc426ab40cc9b17566c92637acb7db23157ba606b",
+        "predictions.csv": "af27290d3a5fdf54d6fffc468956dbf6e17fae82a7a2b98dd51e2d075bcba666"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 507.19707560000825,
+      "fit_seconds": 490.7343993000104,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 2,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "7566fa28eeee40c2d4fee25116c1ed72cd9ec17a7d095148f21e62cfac3a1743",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 29,
+        "best_validation_loss": 0.6732703447341919,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 39
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-02",
+      "seed": 3141,
+      "sha256": {
+        "history.csv": "82fdc483cda2116ed4dc30430823b5805c9af26863b7b42c9be911766adb3a39",
+        "model.keras": "18d59155b6aa2fcd4415396a7ec2bd428025430c85446dd2fb303a276a737fd1",
+        "predictions.csv": "ca431f0f2e9977c00d0bbe65b8d517c8e8e71e6f9fee21eb232d05fdb982f7af"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 488.10267239999666,
+      "fit_seconds": 471.6887602000061,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 2,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "7566fa28eeee40c2d4fee25116c1ed72cd9ec17a7d095148f21e62cfac3a1743",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 29,
+        "best_validation_loss": 0.6739782691001892,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 39
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-02",
+      "seed": 3141,
+      "sha256": {
+        "history.csv": "27d05c55300395c5cb185b63d10bed0f033009f57224e1d9d6ee9158568a4b69",
+        "model.keras": "0ec56dd848f76f11881f78f1447ae4654890da97d542128fe8f3292d788df941",
+        "predictions.csv": "e2d54876d71c91d999b1358e2b214e297b18a690f489be92ee88039dbe4aaa36"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 586.8616153000039,
+      "fit_seconds": 568.8883058000065,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 3,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "a6a58443b6347276ac1f548af815efb77b6e9e4f6ce9eeede8789fe19259c278",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 36,
+        "best_validation_loss": 0.5768133401870728,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 46
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-03",
+      "seed": 4099,
+      "sha256": {
+        "history.csv": "816cb9e961b57bbc76c808b4bbc705b781e25192957981ebd044d26a4983a119",
+        "model.keras": "deeced3a0b9fe4dc045f286c5443916943c6e74c38678b83042240e1faa60866",
+        "predictions.csv": "8c45db2ad1b4548900d0aa24f1e7a00531f61a1d4ec6c9ce865a72f48a6416fe"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1145.3561103999964,
+      "fit_seconds": 1122.9352855000034,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 3,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "a6a58443b6347276ac1f548af815efb77b6e9e4f6ce9eeede8789fe19259c278",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 69,
+        "best_validation_loss": 0.5622809529304504,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 79
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-03",
+      "seed": 4099,
+      "sha256": {
+        "history.csv": "38c196e6e151aa147ddca6ea93d6c989a71124a1f47e3876a9186e50e1e1d42d",
+        "model.keras": "b89adc3d308c0e796f673201247339223dd9c96832e29dedfd9b6f0b18ee23ce",
+        "predictions.csv": "1d4ca9b7cb0adba9082b2f8e841b7d560bb9c695d56e1c988a880d602baf12d2"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1487.9602079999895,
+      "fit_seconds": 1466.9684812999913,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 4,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "276ce6614c8a11218676e6570be9333ff2fb1c7a35f9996cd37c2efff72578d4",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 99,
+        "best_validation_loss": 0.5701595544815063,
+        "epoch_cap_reached": true,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "epoch_cap_reached",
+        "stopping_epoch": 100
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-04",
+      "seed": 5279,
+      "sha256": {
+        "history.csv": "11b75438d4c5ed9a189d25ba21c0b40522a56257d857a32c64688e5e1d93c12e",
+        "model.keras": "e35411dd926e6da6463abb223be20f9e5c4d1da06ad612580b535798114c1c30",
+        "predictions.csv": "5c4a9894f38416b4a46d5ea619c4405e207a8a696debfe8bce2d726ba3c2f6f1"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 688.5724248000042,
+      "fit_seconds": 668.4380116000102,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 4,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "276ce6614c8a11218676e6570be9333ff2fb1c7a35f9996cd37c2efff72578d4",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 35,
+        "best_validation_loss": 0.6740557551383972,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 45
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-04",
+      "seed": 5279,
+      "sha256": {
+        "history.csv": "9ee4e8a499330a972b9f4abcfaba48cc993b118c7c0210ae5bff5ecca6839cde",
+        "model.keras": "c12b61a3d329f48021729bec8155d136d905113d680a963660c883cc7aa7721a",
+        "predictions.csv": "8c31110702fcfd7633277199b3ecce5a61782179718b5c6f1dc9a29bc3e04c7d"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1040.044292400009,
+      "fit_seconds": 1018.1703479000134,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 5,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "3c595f90fa09f48dcc65ceca704033614dd209cbea389a2cd7a8128665762bda",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 59,
+        "best_validation_loss": 0.5687129497528076,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 69
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-05",
+      "seed": 6553,
+      "sha256": {
+        "history.csv": "02f93dfe79b2494298702cc66251b70f7cb79ad82eb4c3c866825f6073346b3b",
+        "model.keras": "e87ea87a37087455e3b81722bb2c50718ec4472b29e9a37cbf59ee40c9bfd775",
+        "predictions.csv": "155de2fe4e0671ee1b01bdcc38d8c1ba8a0fe2812c2b83cefa61e96c18a4b44d"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 827.4068406000006,
+      "fit_seconds": 804.8925560000062,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 5,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "3c595f90fa09f48dcc65ceca704033614dd209cbea389a2cd7a8128665762bda",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 45,
+        "best_validation_loss": 0.5777650475502014,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 55
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-05",
+      "seed": 6553,
+      "sha256": {
+        "history.csv": "c2cee25bf45464a2364ed6234e510cd3f4d444542ad0703e4d6600dcc5209cd3",
+        "model.keras": "cc55e02bfcad94a9da89020dfa6f2f1da6f81b6ce556c3b74b3db50af8f942a3",
+        "predictions.csv": "06b2ee5b82756c57fb60c4565c5f2893a21fbf24bc9eaf01ef9e6fbc4e07815e"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 971.1419904000068,
+      "fit_seconds": 944.7006305000104,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 6,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "b471c5fd5231419bd29827e661078ab220cf467958f5bbe9c80d943728c2f8e7",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 49,
+        "best_validation_loss": 0.5618566274642944,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 59
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-06",
+      "seed": 7919,
+      "sha256": {
+        "history.csv": "93b1a21baa88baac9a8013c24bf1f04ac977a4611a943481b73f58e31c8fab52",
+        "model.keras": "7e66f4cfbf75d9bcbb2a67716ef8c7933aabf0d46476e947cb9c9e29f4a51604",
+        "predictions.csv": "8d478dac29366581c4e46d3412d22414a29a86342bc16e6d6b4095a98714ec89"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 722.0934792000044,
+      "fit_seconds": 691.3807490000036,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 6,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "b471c5fd5231419bd29827e661078ab220cf467958f5bbe9c80d943728c2f8e7",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 30,
+        "best_validation_loss": 0.6742222905158997,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 40
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-06",
+      "seed": 7919,
+      "sha256": {
+        "history.csv": "23df56eb56b3bf42c22e03c13ac67292c0f13ecd7bb65fd170ab35d8a4842f2e",
+        "model.keras": "dd9bd53fd24d0f6de4a1bd797aa76abc7457b10d15bb75566fb4f6850fd54f13",
+        "predictions.csv": "d4e728b3f6821c1d0ae006d497d2b1b091c16d8a60a3202e44f9cc8d72516867"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1082.0738138000015,
+      "fit_seconds": 1059.368272599997,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 7,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "5a40ada254e185b2bf6134ba48a2f292c86cc99fb98e8d5c2dc06a9bf8bf5e22",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 66,
+        "best_validation_loss": 0.5699132680892944,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 76
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-07",
+      "seed": 9341,
+      "sha256": {
+        "history.csv": "9b45cb722e133afaf5742d3257d6791ff1c04d13c62c6f6067282fa3175627a6",
+        "model.keras": "ee3c4ad7535f06c64f20902a4c905d92fda02fd2ca8989b9359e5ea5bccfeb9b",
+        "predictions.csv": "fa77ac73e0a0830b5c4273f4c64cfa5e0af7699c7ac10149df530dc36634a708"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1383.4339791999955,
+      "fit_seconds": 1346.656149100003,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 7,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "5a40ada254e185b2bf6134ba48a2f292c86cc99fb98e8d5c2dc06a9bf8bf5e22",
+      "model_bytes": 1729431,
+      "outcome": {
+        "best_epoch": 50,
+        "best_validation_loss": 0.5700622797012329,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 60
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-07",
+      "seed": 9341,
+      "sha256": {
+        "history.csv": "396b2dd159d364554bbdb3ea665e2805b10d05b24fbc4812a747489af85d4da7",
+        "model.keras": "e6d2bc785a117167c8defb2bd664f82c80ff8b3b18d7da025626e4c85f87965d",
+        "predictions.csv": "eec5d3a95e1c9aec69ededed4fffcfd1a3a59b0fdf417be43ef2b9ac71abc5ff"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 1469.169395600009,
+      "fit_seconds": 1450.904736100012,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 8,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "7ffbf7857c1a5c290d0a9eca46b90cac4a950b12741fd201e9cc9d011c560482",
+      "model_bytes": 1729445,
+      "outcome": {
+        "best_epoch": 21,
+        "best_validation_loss": 0.6732744574546814,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 31
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-08",
+      "seed": 104729,
+      "sha256": {
+        "history.csv": "783d6335e326b15000274feda6ac3e3eadacb03d508092bbbfa840209ec079d1",
+        "model.keras": "787051dd74975f1645dabe9e51a72c5d96648e9e5b544598751f6e733312890b",
+        "predictions.csv": "10880d6c8ee98309a81d85abf494fcff82d9002acbd3a862996bfa89f768fa40"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 758.2785538000026,
+      "fit_seconds": 738.5531997000071,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 8,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "7ffbf7857c1a5c290d0a9eca46b90cac4a950b12741fd201e9cc9d011c560482",
+      "model_bytes": 1729445,
+      "outcome": {
+        "best_epoch": 39,
+        "best_validation_loss": 0.6732633709907532,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 49
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-08",
+      "seed": 104729,
+      "sha256": {
+        "history.csv": "1eda123c43ebec7c0ea3bf99bb17bd74b5b64771e633e106175fd370813c5f03",
+        "model.keras": "f04ac560cd06dfe526b5b977cef1de40d5c12486fef64be78c5c9385558feb03",
+        "predictions.csv": "b1bcc90c9680818ef0d9b1b686eec31aef78890c88b20d7a23eb4d6f69f9e5e4"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 508.83095109999704,
+      "fit_seconds": 491.90968019999855,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 9,
+        "strategy": "object_stratified"
+      },
+      "initial_weight_sha256": "771815e1bada96c31bc5a9e91666537e8cd4acd8c466b04c77bc20be4a6ed24b",
+      "model_bytes": 1729445,
+      "outcome": {
+        "best_epoch": 26,
+        "best_validation_loss": 0.673265814781189,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 36
+      },
+      "parameters": 138561,
+      "run_path": "object_stratified/repeat-09",
+      "seed": 130363,
+      "sha256": {
+        "history.csv": "eacfdf915954ce2fd9d272236f8a398ddddd5445afcaf3319fcd3037f96c41a8",
+        "model.keras": "7abf9879cfcbb6071e530bf01a87e102198b8890fedda4ce706cfb5cc7a699d2",
+        "predictions.csv": "733e614bb27dbd71223f2aeaae4cef1805a5f06aacfcf75dbb91e0cd78b12b54"
+      }
+    },
+    {
+      "context": {
+        "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+        "packages": {
+          "h5py": "3.14.0",
+          "keras": "3.15.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "scipy": "1.17.1",
+          "tensorflow": "2.21.0"
+        },
+        "python": "3.13.15",
+        "source_sha256": {
+          "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+          "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+          "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+          "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+          "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+          "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+          "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+          "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+          "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+          "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+          "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+          "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+        }
+      },
+      "fit_and_artifact_seconds": 786.7876035000081,
+      "fit_seconds": 767.5735060000006,
+      "identity": {
+        "model_version": "kepler_dual_view_cnn_v1",
+        "repeat_id": 9,
+        "strategy": "host_group_stratified"
+      },
+      "initial_weight_sha256": "771815e1bada96c31bc5a9e91666537e8cd4acd8c466b04c77bc20be4a6ed24b",
+      "model_bytes": 1729445,
+      "outcome": {
+        "best_epoch": 50,
+        "best_validation_loss": 0.56243497133255,
+        "epoch_cap_reached": false,
+        "optimizer_state_note": "Saved optimizer reflects stopping epoch; restored weights reflect best epoch. No within-fit resume.",
+        "status": "early_stopped",
+        "stopping_epoch": 60
+      },
+      "parameters": 138561,
+      "run_path": "host_group_stratified/repeat-09",
+      "seed": 130363,
+      "sha256": {
+        "history.csv": "429392fe35f392ca1ecf6d25ae3b71bc49db041dea5f44bb697b1181ef98f87c",
+        "model.keras": "4322061fe7637d5d4ece838a5b4f9d68a102fbf7921040daa89d5233991bcecc",
+        "predictions.csv": "c643ebdc5664011eedb51d93bb98a239508f1ad5cd46714706d125aa7a294a9e"
+      }
+    }
+  ],
+  "status": "complete"
+}

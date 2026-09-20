@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "canonical_npz_sha256_reverified": 6637,
+  "orphan_or_missing": 0,
+  "frozen_metadata": "unchanged",
+  "stage4b_artifacts": "unchanged",
+  "runtime_seconds": 357.328769300002
+}
