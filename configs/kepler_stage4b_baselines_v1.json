@@ -1,0 +1,97 @@
+{
+  "calibration_bins": 10,
+  "certified_commit": "b2d20c6",
+  "eligibility_policy": "all_model_available_v1",
+  "environment_versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.6.0"
+  },
+  "expected_fits": 40,
+  "expected_hosts": 5804,
+  "expected_kois": 6637,
+  "expected_qc_pass": 6354,
+  "experiment_id": "kepler_stage4b_flux_baselines_v1",
+  "feature_count": 2200,
+  "feature_keys": [
+    "global_flux",
+    "local_flux"
+  ],
+  "fit_order": [
+    "logistic_regression",
+    "random_forest"
+  ],
+  "frozen_sha256": {
+    "configs/kepler_lightcurve_preprocessing_v1.json": "3b444e082c16598a135c699a1f3b17af4564b247ad5fd79122587e796de96ac3",
+    "configs/kepler_split_policy_object_vs_host_v1.json": "d9d8a4b4e208aaea2c6bdf85dde6b78c353055b7d6e64884e1ff0ba3703291b1",
+    "configs/kepler_stage4a_scale_v1.json": "a140d838b0f60c1e9fb46f882937175cfaf08655747013173623ee2b112012f8",
+    "data/manifests/kepler_q1_q17_dr25_koi_manifest.csv": "cb04850f53ae0cddc05cd114b0d684e564004d77f7cecba775dec30b50e089e1",
+    "data/splits/kepler_koi_split_assignments_v1.csv": "035e103e28b6b4576d61f05ff0b92835941397b1d1a7370b14fd0fdd93426d2e",
+    "data/stage4a/kepler_stage4a_aggregate_diagnostics_v1.json": "68a1b7fd37825231a5ce67a1d2f98ca3bfc34a39d2f22a3a5ec4ff9bfadc2ffa",
+    "data/stage4a/kepler_stage4a_array_checksums_v1.sha256": "ae2e667e4768c4a1a5d047c95c29f607ed00f3ea47ef910cf2fc8480cc5c157b",
+    "data/stage4a/kepler_stage4a_array_index_v1.csv": "a647925a26b869519b5dce47c17e40e8e256e0d7cb9eb2e5e3c3b71bfd77ed09",
+    "data/stage4a/kepler_stage4a_attrition_report_v1.csv": "770d088e1248004fbd1a9648e235a799731f3eed936291209a32da58de9f93f2",
+    "data/stage4a/kepler_stage4a_attrition_summary_v1.json": "ce82091a0622d95e507352b4c623fa340785ed322c5f73fe2241777b7642f5ae",
+    "data/stage4a/kepler_stage4a_final_metadata_v1.sha256": "6c4bcb6ba41176c057267ccbe6965e07b2be657a952c6848392284cad79475d5",
+    "data/stage4a/kepler_stage4a_final_provenance_v1.json": "30d938c3b1e36126764c74c8f44381025304c031bfdee0db295e7818915aacbd",
+    "data/stage4a/kepler_stage4a_fits_checksums_v1.sha256": "a832ea9c39f6a11cc85b49efe1eb20a20ddd19fe834026509e86f7e41cc3590d",
+    "data/stage4a/kepler_stage4a_fits_manifest_v1.csv": "514a3a2c7a3b311b5ec07811cb1478fca07604d00a1238441f10f2b646eaa5fa",
+    "data/stage4a/kepler_stage4a_host_outcomes_v1.csv": "79bdc3f58fb1598e192328304abaf9676576d0a6e1890a14ee394ae1b84d04d9",
+    "data/stage4a/kepler_stage4a_mast_inventory_v1.csv": "f61ada37f1e2b94f54da8ec85268d5b665f7794b5e360957260809ce7fa778d0",
+    "data/stage4a/kepler_stage4a_processing_manifest_v1.csv": "0290763f6c9855df96aa7576ef0da37cdd28eb19d9585e0ee9479064874c8dc6",
+    "data/stage4a/kepler_stage4a_raw_cleanup_audit_v1.json": "9e14d90e4c1a9349798c4380c0dec767cc3f776ac3d4433ecd556dfcf62f9d67",
+    "data/stage4a/kepler_stage4a_runtime_metadata_checksums_v1.sha256": "b25f231033c04627a06180f131293171ea3edbd77b791d2498f904d283a31cde",
+    "data/stage4a/kepler_stage4a_summary_v1.json": "42ae973fd8b772777b21785fe48c82fa012630eb6f6a9c0961eb3af3e4a7b5bb"
+  },
+  "host_seen_unseen": "secondary_object_test_diagnostic_only",
+  "inputs": {
+    "assignments": "data/splits/kepler_koi_split_assignments_v1.csv",
+    "cohort": "data/manifests/kepler_q1_q17_dr25_koi_manifest.csv",
+    "index": "data/stage4a/kepler_stage4a_array_index_v1.csv",
+    "processing": "data/stage4a/kepler_stage4a_processing_manifest_v1.csv"
+  },
+  "models": {
+    "logistic_regression": {
+      "C": 1.0,
+      "class_weight": null,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 2000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "random_forest": {
+      "bootstrap": true,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 12,
+      "max_features": "sqrt",
+      "min_samples_leaf": 5,
+      "n_estimators": 200,
+      "n_jobs": 1
+    }
+  },
+  "numerical_threads": 1,
+  "primary_metric": "test_roc_auc",
+  "seeds": [
+    1729,
+    2718,
+    3141,
+    4099,
+    5279,
+    6553,
+    7919,
+    9341,
+    104729,
+    130363
+  ],
+  "sensitivity": "qc_pass_evaluation_only_same_fitted_models",
+  "strategies": [
+    "object_stratified",
+    "host_group_stratified"
+  ],
+  "threshold": 0.5
+}

@@ -1,8 +1,10 @@
 # Astrobiology Synthetic Data Prototype
 
 This repository is an early interface and synthetic-data prototype for two future
-astrobiology machine-learning projects. **It does not currently contain trained
-machine-learning models or perform inference on observed data.**
+astrobiology machine-learning projects. **The Streamlit application remains a
+synthetic demonstration and does not perform inference on observed data.**
+The separate Stage 4B command-line workflow implements supervised Kepler
+baselines; its trained artifacts and evaluation reports are separate from the app.
 
 ## Current components
 
@@ -142,4 +144,23 @@ files. The FITS checksum discrepancy was traced to Astropy's handling of
 CHECKSUM-only headers; raw-byte checksum checks and eight fresh MAST comparisons
 passed. See the [validation policy](docs/kepler_stage4a_validation_policy.md) and
 [certification report](docs/kepler_stage4a_certification_report.md) for evidence,
-final hashes, QC warnings, and retained-source accounting. Stage 4B has not started.
+final hashes, QC warnings, and retained-source accounting. Stage 4A itself
+contains no model training.
+
+## Stage 4B: supervised baseline experiment
+
+Stage 4B uses the certified arrays and frozen paired Stage 3 splits to compare
+training-only scaled logistic regression with a bounded Random Forest. All
+6,637 model-available KOIs remain in the primary cohort; QC-pass-only scores are
+an evaluation sensitivity using the same fitted models. Host seen/unseen scores
+are secondary diagnostics and cannot change the primary paired test comparison.
+
+See [the fixed experiment specification](docs/kepler_stage4b_baselines.md).
+The completed 40-fit experiment, independent prediction verification, metrics,
+runtime and artifact hashes are in [the Stage 4B report](docs/kepler_stage4b_report.md).
+Compact results and run status are written to `data/stage4b/`; large model and
+prediction artifacts are kept in ignored `data/stage4b_runtime/`. An incomplete
+run is reported explicitly and is not treated as a completed experiment.
+The Streamlit similarity score remains the original synthetic heuristic and is
+unrelated to these trained classifiers. No model integration into the app,
+CNN, Stage 5 or TESS processing is included.

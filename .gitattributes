@@ -1,0 +1,7 @@
+# Preserve certified Stage 4B bytes, including provenance-pinned source files.
+/configs/kepler_stage4b_baselines_v1.json -text
+/data/stage4b/** -text
+/docs/kepler_stage4b* -text
+/kepler_baselines/** -text
+/scripts/stage4b* -text
+/tests/test_stage4b* -text

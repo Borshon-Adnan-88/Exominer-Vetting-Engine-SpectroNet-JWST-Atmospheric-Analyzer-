@@ -1,0 +1,27 @@
+{
+  "families": {
+    "logistic_regression": {
+      "fit_predict_serialize_seconds": 163.06901470004232,
+      "fit_seconds": 143.2009415999928,
+      "fits": 20,
+      "model_artifact_bytes": 1301790
+    },
+    "random_forest": {
+      "fit_predict_serialize_seconds": 547.47288820002,
+      "fit_seconds": 498.4525358000101,
+      "fits": 20,
+      "model_artifact_bytes": 36385206
+    }
+  },
+  "input_validation_seconds": 344.6958816999977,
+  "process_peak_rss_bytes": 558800896,
+  "sampled_phase_peak_rss_bytes": {
+    "input_validation": 364625920,
+    "logistic_regression": 558800896,
+    "random_forest": 511971328,
+    "reporting": 406835200
+  },
+  "sampling_interval_seconds": 0.05,
+  "scope": "Process working set/RSS including interpreter and feature matrix; family peaks are sampled, not incremental allocations.",
+  "total_experiment_seconds": 1070.5086848000064
+}
