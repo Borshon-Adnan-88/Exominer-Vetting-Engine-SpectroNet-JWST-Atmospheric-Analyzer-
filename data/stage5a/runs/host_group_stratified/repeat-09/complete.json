@@ -1,0 +1,26 @@
+{
+  "context": {
+    "source_sha256": "b395594ac8f36e817ecae2b0de7fdb20a7d40e4edb1e637976fde0f53716e64e",
+    "policy": {
+      "sample_size": 128,
+      "sample": "smallest SHA256(KOI) among training rows",
+      "batch_sizes": [
+        32,
+        64,
+        256
+      ],
+      "near_constant_range": 1e-07,
+      "small_range": 1e-06,
+      "few_values": 3,
+      "loss_improvement": 0.01,
+      "divergence_gap_increase": 0.05,
+      "plateau_last_epochs": 5,
+      "plateau_loss_range": 0.001
+    },
+    "certified_commit": "4a2b193",
+    "anchors_sha256": "5352551a3a59fa52253eced4ec02b69196dd9370d9440e0f895d989ff62cae0e"
+  },
+  "sha256": {
+    "diagnostics.json": "a6e98a78d06d68111f31cbe1f5252ff4698de92188283f9d783a926f7ff1c93e"
+  }
+}

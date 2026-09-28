@@ -1,0 +1,11 @@
+{
+  "context": "94417a3d06e0560dca0a0c4c2bb77eec577500785988bc91b78aa41e7051d8c4",
+  "config_sha256": "68cfc2b4ada7d6ce04db8b189a146f13ee3c2155e49d6c249fefa5c1fcc70c56",
+  "parent_config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+  "stage5a_report_sha256": "340efc6263146faf30f18a1c80e2271f7f55fd3920609924a82a6e43a4470dde",
+  "source_diff_sha256": "939cffda0a718dbdb4d4ca0bfa2bee74a5a003ef3ecf15cd145137249807f525",
+  "scientific_fits": 20,
+  "runtime_seconds": 9256.658313700027,
+  "certified_inputs_unchanged": true,
+  "independent_external_confirmation": false
+}

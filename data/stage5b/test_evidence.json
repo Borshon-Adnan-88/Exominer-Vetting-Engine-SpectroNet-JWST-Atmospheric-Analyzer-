@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "passed": 162,
+  "skipped": 0,
+  "suites": [
+    {
+      "file": "stage5b-focused.xml",
+      "sha256": "01904010db252d10e1eaa7747288ea35e9b67c0acd7dc64ed4e6358f6b4e0a2c",
+      "tests": 10,
+      "skipped": 0
+    },
+    {
+      "file": "stage5b-offline.xml",
+      "sha256": "9d76db9eafe589fcf244753b1dad3e82d2bd9a0f195884e68ee56829d94358ae",
+      "tests": 162,
+      "skipped": 0
+    }
+  ],
+  "network_tests": "excluded with -m not network"
+}

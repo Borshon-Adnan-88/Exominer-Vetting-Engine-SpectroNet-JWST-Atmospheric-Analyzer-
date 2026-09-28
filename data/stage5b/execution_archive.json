@@ -1,0 +1,9 @@
+{
+  "purpose": "Preserve runner-era metadata before final certification refreshes provenance and compact checksums.",
+  "historical_manifest": "execution_checksums.sha256",
+  "historical_provenance": "execution_provenance.json",
+  "historical_manifest_note": "Original paths and digests are retained as historical evidence. Its provenance.json entry describes execution_provenance.json; the current provenance.json is enriched by final certification. Log and temporary-file entries describe preserved local files excluded from Git.",
+  "current_compact_manifest": "checksums.sha256",
+  "immutable_scientific_runtime_manifest": "runtime_checksums.sha256",
+  "runtime_root": "data/stage5b_runtime/activation_v1"
+}

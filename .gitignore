@@ -23,3 +23,8 @@ stage4a-*.log
 data/stage4a_runtime/
 data/stage4b_runtime/
 data/stage5_runtime/
+data/stage5b_runtime/
+/data/stage5a/*.log
+/data/stage5a/runner.lock
+/data/stage5b/*.log
+/data/stage5b/runner.lock

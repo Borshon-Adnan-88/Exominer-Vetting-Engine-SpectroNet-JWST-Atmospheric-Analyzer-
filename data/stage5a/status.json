@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "completed_models": 20,
+  "total_models": 20,
+  "current_model": null,
+  "current_phase": "finished",
+  "last_update": "2026-09-20T18:18:37.261951+00:00",
+  "pid": 2788,
+  "runtime_seconds": 857.4943458000198
+}

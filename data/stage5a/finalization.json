@@ -1,0 +1,43 @@
+{
+  "status": "finalized",
+  "models": 20,
+  "focused_tests": "4 passed: tests/test_stage5a_reporting.py; 5.77 seconds",
+  "row_counts": {
+    "run_diagnostics": 20,
+    "layer_weight_diagnostics": 440,
+    "activation_diagnostics": 120,
+    "input_diagnostics": 40,
+    "numerical_sensitivity": 240,
+    "training_histories": 1133
+  },
+  "certified_anchor_files_verified": 247,
+  "model_and_prediction_hashes": "unchanged",
+  "weight_preservation": "20 recorded before/after weight-hash assertions passed; saved-model byte hashes unchanged",
+  "canonical_arrays": "Runner verified canonical file and logical hashes before diagnostics; reused read-only execution evidence, no full NPZ reload during reporting.",
+  "diagnostic_runtime_seconds": 857.4943458000198,
+  "inference_calls": 0,
+  "training_calls": 0,
+  "original_diagnostic_checksums_sha256": "17658270292858da1feea399bb1643ff96886f9b7ebd04ac0b0a0c247443e0dc",
+  "created": [
+    "scripts/stage5a_finalize_report.py",
+    "tests/test_stage5a_reporting.py",
+    "data/stage5a/finalization.json",
+    "data/stage5a/group_comparison.csv",
+    "data/stage5a/activation_group_comparison.csv",
+    "data/stage5a/weight_group_comparison.csv",
+    "data/stage5a/input_group_comparison.csv",
+    "data/stage5a/numerical_group_comparison.csv",
+    "data/stage5a/class_prior_comparison.csv",
+    "data/stage5a/figures/activation_group_comparison.png",
+    "data/stage5a/figures/numerical_sensitivity_summary.png"
+  ],
+  "modified": [
+    "docs/kepler_stage5a_failure_analysis.md",
+    "data/stage5a/diagnostic_summary.json",
+    "data/stage5a/checksums.sha256",
+    "data/stage5a/report_integrity.json"
+  ],
+  "reporting_source_sha256": "c439f6df296f8e32c6941ad22de8088e99ac15652aa95de491453b0056c05799",
+  "git_diff_check": "passed",
+  "reporting_validation": "passed: receipts, identities, tables, anchors, sample boundaries and sensitivity coverage"
+}

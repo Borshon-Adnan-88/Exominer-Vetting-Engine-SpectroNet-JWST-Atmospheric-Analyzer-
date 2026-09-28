@@ -1,0 +1,11 @@
+{
+  "status": "stopped_for_review",
+  "completed_models": 9,
+  "total_models": 20,
+  "current_model": null,
+  "current_phase": "stopped_for_review",
+  "pid": 15180,
+  "last_update": "2026-09-26T16:46:13.831904+00:00",
+  "error": "File unavailable offline; defer without download: G:\\My Drive\\Exominer Research Data\\kepler_dr25\\processed\\757450\\K00889_01.npz",
+  "nonfinite_failure": false
+}

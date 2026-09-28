@@ -1,0 +1,11 @@
+{
+  "status": "stopped_for_review",
+  "completed_models": 9,
+  "total_models": 20,
+  "current_model": "host_group_stratified/repeat-02",
+  "current_phase": "stopped_for_review",
+  "pid": 14120,
+  "last_update": "2026-09-26T16:24:30.914321+00:00",
+  "error": "[WinError 5] Access is denied: 'data\\\\stage5b\\\\run_manifest.json.tmp' -> 'data\\\\stage5b\\\\run_manifest.json'",
+  "nonfinite_failure": false
+}

@@ -1,0 +1,13 @@
+--- kepler_cnn/model.py
++++ kepler_cnn_variant/model.py
+@@ -41,8 +41,9 @@
+         inputs.append(inp)
+         branches.append(tf.keras.layers.Flatten(name=branch + "_flatten")(x))
+     x = tf.keras.layers.Concatenate(name="fusion")(branches)
+-    x = tf.keras.layers.Dense(32, activation="relu", kernel_initializer=tf.keras.initializers.HeNormal(seed=seed + 4),
++    x = tf.keras.layers.Dense(32, activation="linear", kernel_initializer=tf.keras.initializers.HeNormal(seed=seed + 4),
+         bias_initializer="zeros", name="hidden")(x)
++    x = tf.keras.layers.LeakyReLU(negative_slope=0.01, name="hidden_leaky_relu")(x)
+     x = tf.keras.layers.Dropout(.2, seed=seed + 5, name="dropout")(x)
+     out = tf.keras.layers.Dense(1, activation="sigmoid", kernel_initializer=tf.keras.initializers.GlorotUniform(seed=seed + 6),
+         bias_initializer="zeros", name="confirmed_probability")(x)

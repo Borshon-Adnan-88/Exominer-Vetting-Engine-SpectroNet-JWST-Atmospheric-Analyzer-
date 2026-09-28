@@ -1,0 +1,11 @@
+{
+  "status": "stopped_for_review",
+  "completed_models": 0,
+  "total_models": 20,
+  "current_model": null,
+  "current_phase": "stopped_for_review",
+  "pid": 28920,
+  "last_update": "2026-09-26T16:08:37.542611+00:00",
+  "error": "No module named 'tensorflow'",
+  "nonfinite_failure": false
+}

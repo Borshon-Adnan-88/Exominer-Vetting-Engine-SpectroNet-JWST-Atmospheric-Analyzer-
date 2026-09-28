@@ -1,0 +1,65 @@
+{
+  "status": "certified",
+  "models": 20,
+  "scientific_fits_executed": 0,
+  "run_integrity_sha256": "80f70f183684e2999db47c3445558d3394226bb72bdf60ea6a55180c75737945",
+  "replay_sha256": "f1d17641433f2c585c2e4a5491a06be6a41c87a2eb4ca98535ed0eadbd2e3d34",
+  "tests": {
+    "status": "passed",
+    "passed": 162,
+    "skipped": 0,
+    "suites": [
+      {
+        "file": "stage5b-focused.xml",
+        "sha256": "01904010db252d10e1eaa7747288ea35e9b67c0acd7dc64ed4e6358f6b4e0a2c",
+        "tests": 10,
+        "skipped": 0
+      },
+      {
+        "file": "stage5b-offline.xml",
+        "sha256": "9d76db9eafe589fcf244753b1dad3e82d2bd9a0f195884e68ee56829d94358ae",
+        "tests": 162,
+        "skipped": 0
+      }
+    ],
+    "network_tests": "excluded with -m not network"
+  },
+  "git_diff_check": "passed",
+  "frozen_inputs": "unchanged",
+  "finalizer_sha256": "30a1eba15eb388e2078d326fd56058d96715ae66445592d6e3ec208d93775117",
+  "runtime_checksums_sha256": "6c36d2d8f77b09659464d1d72d67b2bf416d559f76db181570241560a12b1eef",
+  "result_hashes": {
+    "activation_diagnostics.csv": "a1af5cc96aa7da020f93e67046d17dd658ab8e55a1887c03f15f04481e64af75",
+    "activation_group_comparison.csv": "3114ce8e440a3ccbe1b3a413c67963fa35a1461b14290537263b3113bbf867d1",
+    "baseline_comparisons.csv": "bf34116b2846e9728f693999c47de6b7a1b944161fee637b17117052cf0aa1d1",
+    "calibration_bins.csv": "63e917434cc00afe3959d3058d9409819428edbc291c4b65243410d6f745513d",
+    "comparison_summary.csv": "4f060304dd52a07f6d04a30517327a0253b4bd72c626a3d631f1635269f8f146",
+    "diversity_group_comparison.csv": "5af3b578ce20178d0c3029ea5ecf05fd7df497f13fa66d219077d58e5c5a6d78",
+    "figures/activation_variance.png": "f442b672a92550cd639c621d537a1566ff45d9343c5731a20470016adb22a650",
+    "figures/calibration.png": "33046ef75980d008b1c69dcd42f7ab981371ce1a2e8e076c3631e2f71b3555dd",
+    "figures/collapse_stability.png": "d8afc6f100b72501b4cdf1e2b8bfe36f937e6d7bb46627feb32df584a4a7176f",
+    "figures/learning_histories.png": "bf266d8838e561f4efb8e15789af8dd3cdc552fb06400489c829faa8b126c32a",
+    "figures/object_vs_grouped.png": "08a2dde1ee2e1efecf77e0d1d1de0cd70587012b90225d12dea961656f2a42c2",
+    "figures/paired_random_forest_roc_auc.png": "e68c8cff6d17bd44b0ae4a4c7df45a286c61c95f8e249855e795d78e46e71b1f",
+    "figures/paired_stage5_roc_auc.png": "47d974f26745f2949f3f513c0515c84a04cc293c56e3a10f2757bea51e400534",
+    "figures/test_roc.png": "1ae5fe842a08aea584104b8797a65b82ba1fbf23975d380beae7d8b3a15b57d3",
+    "host_diagnostic.csv": "b9fc38e4d16f83db717360e2212dd9534908c6cf3b8cccbe00d8730fcbd7fef7",
+    "inference_cohort_comparison.csv": "30ae2084f26f70f5059d68b63469b55beee923729aa6075e360ba395d9a8b1ac",
+    "metrics.csv": "24c6ac90bee76d04702b47201ef19e4046fbaf76d571cd9d6e2058caed919a52",
+    "output_diversity.csv": "72a78716c4e555b815d4c4e91b180daf7e15122eea0613ec19594881c8959b36",
+    "paired_differences.csv": "285455027cc2cb225d8c3550fd0edeeeb29a710dc010279276c0edb26821bc60",
+    "paired_summary.csv": "dd616d7e092addaf9ac5ae1e0b9c3a0e5c9a3ede13caf74727498bb369228ec7",
+    "qc_sensitivity.csv": "95a89e757efda4a81cd95129587ac71493526cf611de488fa1988bedc17ab4ad",
+    "reference_comparisons.csv": "ed0ae1b0c2129f4203968d542caa4c6475ac17d8d7bf7d20feb8d360ff954928",
+    "repeat_summary.csv": "fb66d1b2ece0e2cd83a2282f5b6e1e811b02b4ccbdba826d27f3c3394df34bb3",
+    "run_outcomes.csv": "1ef0e533d7ce6d7796fda00f9dcd641f6c907bfc84d5b03c26118db94c86969b",
+    "split_comparison_summary.csv": "a1868544d7ad22f1ef3466f2c78491765d3179050dc95804f9bde09955d1633d",
+    "stability_summary.csv": "18237425e4f521a022b1d4b8be35844b3f01386ce0374964ba5218f98272fd3d",
+    "stage5_comparisons.csv": "c7a781a9768cb35e736c08401f423022dd9ec7f6ee95d76b988a5acf84b382d7",
+    "test_descriptive_summary.csv": "eab277be210ec2c8c85c38f8e8bc759a304ae0127555eeeca70984e39803b8e3",
+    "test_metrics.csv": "12da8003c422adaf99a94f52275c49ce0e91c7580077a35ec8bbbd5e3a366f42",
+    "training_histories.csv": "3086e8dc4f75a4d85593c0991968a01f3c5220fd7056d59528d786d06666bef2",
+    "validation_comparisons.csv": "09628c81b019776152b84fddda5bec0f43a42d0341396255edd6ac08206d6b26"
+  },
+  "external_confirmation": false
+}

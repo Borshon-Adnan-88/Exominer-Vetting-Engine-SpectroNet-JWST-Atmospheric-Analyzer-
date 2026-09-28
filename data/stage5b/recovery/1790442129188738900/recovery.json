@@ -1,0 +1,19 @@
+{
+  "preserved_models": 9,
+  "context": "94417a3d06e0560dca0a0c4c2bb77eec577500785988bc91b78aa41e7051d8c4",
+  "python": "C:\\Users\\Borshon Adnan\\OneDrive\\Exominer Project\\.venv\\stage5\\Scripts\\python.exe",
+  "tensorflow": "2.21.0",
+  "cache_sha256": "bcd910ad5c18fe0174d1c267316cb600f854361cf8127c4d8b8d3ef5b138c43f",
+  "policy": "No complete fit repeated. Only interrupted run without checkpoint restarts from its frozen seed. Canonical-equivalent frozen cache reused.",
+  "protected": {
+    "data\\stage5b_runtime\\activation_v1\\object_stratified\\repeat-00\\training_complete.json": "cdc9f82cb2da07438aa364369c43cbd47d6e9c299303720f6ebc7bc77f2ae1bb",
+    "data\\stage5b_runtime\\activation_v1\\host_group_stratified\\repeat-00\\training_complete.json": "74ff7f044c40900a3f1c0f9640d50eaaf4e4dc904cc356ba5131af2fcb20c30d",
+    "data\\stage5b_runtime\\activation_v1\\object_stratified\\repeat-01\\training_complete.json": "3f4106f4ea87c52c65dde78f7e0b7682be6d065bddc852dbeadb066b27328995",
+    "data\\stage5b_runtime\\activation_v1\\host_group_stratified\\repeat-01\\training_complete.json": "c505b24b0008f607c8961cac999514e4861d2e3eeedb7040f77b92a5105ad4a3",
+    "data\\stage5b_runtime\\activation_v1\\object_stratified\\repeat-02\\training_complete.json": "173a670197b79790c48b6cf83b9a28af3173193fc5529d7e96b73c809325e249",
+    "data\\stage5b_runtime\\activation_v1\\host_group_stratified\\repeat-02\\training_complete.json": "5ca99e5c7526429b3c1b8f98473f16ce608867f64f26d3c8738d4879769fa37c",
+    "data\\stage5b_runtime\\activation_v1\\object_stratified\\repeat-03\\training_complete.json": "4f584b1d463869149a26fc36a25108a2f4d4d1fe798d6d6068d0d816fb646845",
+    "data\\stage5b_runtime\\activation_v1\\host_group_stratified\\repeat-03\\training_complete.json": "c616af808f1d502c5365531bdbb75083baa7b1d74b8be4bcb5e2789540ec1bbb",
+    "data\\stage5b_runtime\\activation_v1\\object_stratified\\repeat-04\\training_complete.json": "c3613c129528abb953fd4dca6d269cce1f82f074cb5f95d5e45f0dabd223fcae"
+  }
+}

@@ -6,10 +6,13 @@
 /scripts/stage4b* -text
 /tests/test_stage4b* -text
 # Preserve certified Stage 5 bytes; existing CRLF and LF files stay unchanged.
-/configs/kepler_stage5* -text
+/configs/kepler_stage5* -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /data/stage5/** -text
 /data/stage5_infrastructure/** -text
-/docs/kepler_stage5* -text
+/docs/kepler_stage5* -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /kepler_cnn/** -text
-/scripts/stage5* -text
-/tests/test_stage5* -text
+/scripts/stage5* -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/tests/test_stage5* -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/kepler_cnn_variant/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/data/stage5a/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/data/stage5b/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
