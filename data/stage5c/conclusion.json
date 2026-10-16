@@ -1,0 +1,12 @@
+{
+  "location": "B: fusion/compression",
+  "recommendation": "Retain the branches and test one wider fusion hidden layer, leaving the rest of the protocol frozen.",
+  "runs": 20,
+  "linear_probe_fits": 120,
+  "cnn_fits": 0,
+  "evaluation": "validation only; test rows excluded",
+  "branch_dominant_pairs": 1,
+  "fusion_dominant_pairs": 19,
+  "runtime_seconds": 408.7169205000009,
+  "protocol_sha256": "a245c998205c1b4298d4a197f71f47915fe6228de5c57339f8e8dbdf951cab60"
+}
