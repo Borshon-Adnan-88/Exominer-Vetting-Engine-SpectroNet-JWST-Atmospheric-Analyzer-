@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "cnn_fits": 20,
+  "learned_probes": 80,
+  "reused_raw_probes": 40,
+  "protected_hashes": 170,
+  "held_out_evaluated": false,
+  "scientific_fits_in_finalization": 0,
+  "tests": {
+    "finalization-focused-tests.xml": {
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "sha256": "ead08a12817db6331ea92022f21f3f393d38bd77ce018add62b63209d497b631"
+    },
+    "finalization-offline-tests.xml": {
+      "passed": 178,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "sha256": "3c5ee2a8489c55e2c36f7e033c1d34a55bc1ff27c41aab13adebe892acc1367d"
+    }
+  },
+  "decision": "GO",
+  "network_tests_deselected": 3,
+  "git_diff_check": "passed",
+  "preparation_source_and_protected_hashes": "passed",
+  "stability": {
+    "nonfinite_failures": 0,
+    "severe_outputs": 0,
+    "low_diversity_outputs": 0,
+    "stage5d_epoch_caps": 7,
+    "stage5b_epoch_caps": 4
+  },
+  "test_evaluation_executed": false
+}

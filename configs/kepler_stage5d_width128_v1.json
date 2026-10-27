@@ -1,0 +1,60 @@
+{
+  "experiment_id": "kepler_fusion_width128_v1",
+  "parent_config": "configs/kepler_stage5b_activation_v1.json",
+  "parent_config_sha256": "68cfc2b4ada7d6ce04db8b189a146f13ee3c2155e49d6c249fefa5c1fcc70c56",
+  "hidden_units": 128,
+  "expected_parameters": 538113,
+  "strategies": [
+    "object_stratified",
+    "host_group_stratified"
+  ],
+  "seeds": [
+    1729,
+    2718,
+    3141,
+    4099,
+    5279,
+    6553,
+    7919,
+    9341,
+    104729,
+    130363
+  ],
+  "training": {
+    "batch_size": 64,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "class_weight": null,
+    "epochs": 100,
+    "epsilon": 1e-07,
+    "global_clipnorm": 1.0,
+    "learning_rate": 0.001,
+    "loss": "binary_crossentropy",
+    "min_delta": 0,
+    "mode": "min",
+    "monitor": "val_loss",
+    "optimizer": "Adam",
+    "patience": 10,
+    "restore_best_weights": true,
+    "sample_weight": null,
+    "threshold": 0.5,
+    "weight_decay": null
+  },
+  "primary_metric": "validation ROC-AUC at minimum-validation-BCE checkpoint",
+  "checkpoint_selection": "min validation_loss; earliest epoch on tie",
+  "probe_protocol": "data/stage5c/protocol.json",
+  "probe_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "fit_intercept": true,
+    "l1_ratio": 0.0,
+    "max_iter": 2000,
+    "solver": "lbfgs",
+    "tol": 0.0001
+  },
+  "evaluation_partitions": [
+    "train",
+    "validation"
+  ],
+  "feature_cache_sha256": "bcd910ad5c18fe0174d1c267316cb600f854361cf8127c4d8b8d3ef5b138c43f"
+}

@@ -16,3 +16,6 @@
 /kepler_cnn_variant/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /data/stage5a/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /data/stage5b/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+
+/kepler_cnn_width128/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/data/stage5d/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

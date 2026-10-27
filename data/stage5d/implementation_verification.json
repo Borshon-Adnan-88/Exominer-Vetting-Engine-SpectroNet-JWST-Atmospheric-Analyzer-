@@ -1,0 +1,33 @@
+{
+  "status": "implementation_verified_not_executed",
+  "utc": "2026-10-16T17:40:19.398313+00:00",
+  "focused_tests_passed": 11,
+  "scientific_cnn_fits_executed": 0,
+  "linear_probe_fits_executed": 0,
+  "tests_use_untrained_models_and_fit_stubs": true,
+  "architecture_parameters": 538113,
+  "initialization_seeds_verified": 10,
+  "baseline_pairs_verified": 20,
+  "raw_probes_compatible": 40,
+  "checkpoint": "minimum validation BCE; earliest epoch on tie",
+  "held_out_evaluation": "No evaluation phase/CLI option; guarded train/validation feature boundary and orchestration tests passed",
+  "resume": "Completed phases skipped; partial, corrupt, changed-context or identity/binding-mismatched phases stop; tested with no training",
+  "static_checks": "AST parse, compile in memory, new-source whitespace, git diff --check passed",
+  "existing_git_changes": "Original .gitignore/.gitattributes bytes preserved as prefixes; Stage 5D rules appended",
+  "protected_sha256": {
+    "kepler_cnn_variant\\model.py": "f3a83aa1253f8476d69f4642a64a6d9dcfb1c990a2b02636456ab36f00955371",
+    "scripts\\stage5b_run_activation_variant.py": "c8e0bd0783659d306288804beb2c7a77b9f970ca4c8754ea0dc11f5070156592",
+    "scripts\\stage5c_linear_probes.py": "95b3acb25acb00dab17f010ca6fc27aa81cd6ee85bf5aaa3ba95dd8bbc26ad72",
+    "data\\stage5b\\checksums.sha256": "ed358a5f544ff8cb33e50f8bd764171dd88a7c8dac12fed972678236b31ce456",
+    "data\\stage5c\\checksums.sha256": "dd4f9ddfe80c4a94a22a195727bb9363172b12b7d71cf4f5be56c0f5fab86fb2"
+  },
+  "source_sha256": {
+    "scripts/stage5d_run_fusion_width.py": "b9a6944c571682ca9cb156893dbe05b5cef2d842316ee27034c15e27cd3bc5cb",
+    "kepler_cnn_width128/__init__.py": "9995f8641e389a01f08ec3f9535efbfa1aa055552efd96bf9daa4e0762cdb8a4",
+    "kepler_cnn_width128/model.py": "bddbe70639759e50d7184278b40a0a4adabc0278385a259ab3c6de1a4b4a380a",
+    "tests/test_stage5d_fusion_width.py": "0c22c3ce112205b1101586f92da6aebaac5c6f68571fc7ec9bd68e9b9acb6aa4"
+  },
+  "freeze_sha256": "68875685b70ebf02974ca413f1d24bc1d60fbba38ea8b772e1cc31cc5a81ccf2",
+  "preflight_sha256": "a7bb69202f66725d3df0d37f858fbb46e231fc12b5eda7075b5582e6d28add05",
+  "tests_xml_sha256": "a56df7b1fc437a0a06c6ddec3c790f0ae7b7ec73c370bfa1cca049d08c36e182"
+}

@@ -1,0 +1,247 @@
+{
+  "recommendation": "GO",
+  "hypothesis": "partially supported",
+  "validation_only": true,
+  "held_out_evaluated": false,
+  "primary": [
+    {
+      "strategy": "host_group_stratified",
+      "stage5d_mean": 0.6637465457052012,
+      "stage5b_mean": 0.6335255667336903,
+      "count": 10,
+      "mean": 0.03022097897151087,
+      "median": 0.027611266971460213,
+      "sd": 0.03746960119610591,
+      "min": -0.022746164890803278,
+      "max": 0.08178451178451174,
+      "improved": 7,
+      "worsened": 3,
+      "tied": 0
+    },
+    {
+      "strategy": "object_stratified",
+      "stage5d_mean": 0.6332332086497651,
+      "stage5b_mean": 0.629275240026364,
+      "count": 10,
+      "mean": 0.00395796862340102,
+      "median": -0.0014693349789884902,
+      "sd": 0.031848121922045176,
+      "min": -0.05614748764709099,
+      "max": 0.052973724092475694,
+      "improved": 5,
+      "worsened": 5,
+      "tied": 0
+    },
+    {
+      "strategy": "overall",
+      "stage5d_mean": 0.6484898771774831,
+      "stage5b_mean": 0.6314004033800272,
+      "count": 20,
+      "mean": 0.017089473797455946,
+      "median": 0.013081764540427698,
+      "sd": 0.03642815099728196,
+      "min": -0.05614748764709099,
+      "max": 0.08178451178451174,
+      "improved": 12,
+      "worsened": 8,
+      "tied": 0
+    }
+  ],
+  "fusion_gap_32": 0.10597151678524128,
+  "fusion_gap_128": 0.002237802611180528,
+  "gap_reduction": {
+    "count": 20,
+    "mean": 0.10373371417406077,
+    "median": 0.10248821383441858,
+    "sd": 0.06152588603413824,
+    "min": -0.004932953810759311,
+    "max": 0.21303258145363424,
+    "improved": 19,
+    "worsened": 1,
+    "tied": 0
+  },
+  "object_minus_host_group": {
+    "count": 10,
+    "mean": -0.030513337055436053,
+    "median": -0.016434249572378934,
+    "sd": 0.03967353251006805,
+    "min": -0.10188763143074175,
+    "max": 0.012751728567650278,
+    "improved": 2,
+    "worsened": 8,
+    "tied": 0
+  },
+  "runtime": {
+    "cnn_fit_and_artifact_seconds": 19129.5304943,
+    "mean_cnn_fit_and_artifact_seconds": 956.4765247150001,
+    "median_cnn_fit_and_artifact_seconds": 1021.7810948999991,
+    "pure_cnn_epoch_seconds": 18834.96520759997,
+    "wall_clock_seconds": null,
+    "probe_seconds": null,
+    "limitation": "No persisted start timestamp or probe timer: exact total wall-clock and probe durations cannot be reconstructed. Filesystem timestamps are not timing receipts."
+  },
+  "interpretation": "Widening improves mean CNN validation ROC-AUC, mainly on host-group splits; object-level gains are small and mixed. The hidden linear probes preserve more discriminative information and the fusion gap shrinks, consistently with Stage 5C, but the CNN remains far below the raw/concatenated probes. This supports a single frozen test evaluation as a hypothesis check, not a claim of strong predictive performance or a causal isolation of compression: both branches were trained end-to-end. Repeated validation reuse and overlapping splits limit independence; no post-hoc significance threshold is applied.",
+  "fraction_fusion_gap_reduced": 0.9788829802661448,
+  "fraction_original_concat_to_cnn_gap_closed": 0.08681668420847206,
+  "proposed_test_protocol": {
+    "execute": false,
+    "checkpoint": "saved minimum-validation-BCE weights; earliest epoch on tie",
+    "models": [
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-00\\cnn\\model.keras",
+        "sha256": "da668ac594e0e1bef44c000555b642faaa3818f228e35767c378521c629f8eba",
+        "strategy": "object_stratified",
+        "repeat_id": 0,
+        "seed": 1729
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-00\\cnn\\model.keras",
+        "sha256": "6efa374d9aa803ab172289e334a09bc39974aa9cdca3393262bca69dbc023de3",
+        "strategy": "host_group_stratified",
+        "repeat_id": 0,
+        "seed": 1729
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-01\\cnn\\model.keras",
+        "sha256": "618ea60d89eb300b1b004c6cff0044dda7abc5f36c7523e5606ee6dd802edcf0",
+        "strategy": "object_stratified",
+        "repeat_id": 1,
+        "seed": 2718
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-01\\cnn\\model.keras",
+        "sha256": "fb45b10d9be2dc759256e07ae74b316e9b632e7d9da46cd2d32f3fca7da7770d",
+        "strategy": "host_group_stratified",
+        "repeat_id": 1,
+        "seed": 2718
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-02\\cnn\\model.keras",
+        "sha256": "46b455b44e1d090adb471d0549ed161f524dcdc8cacf2904b75d98fcd32f7c29",
+        "strategy": "object_stratified",
+        "repeat_id": 2,
+        "seed": 3141
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-02\\cnn\\model.keras",
+        "sha256": "cb539b97f08ab399bbf214fcff8a625329433d5e324b68339e82d362dedb9513",
+        "strategy": "host_group_stratified",
+        "repeat_id": 2,
+        "seed": 3141
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-03\\cnn\\model.keras",
+        "sha256": "45b20a0a090d3e5406a2fc0414528a0be255042dc83612b0f1e2743e3a7cf374",
+        "strategy": "object_stratified",
+        "repeat_id": 3,
+        "seed": 4099
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-03\\cnn\\model.keras",
+        "sha256": "10d672077bd454ca5372937cce4a6777ad6cd311712c771c356c129d666e227a",
+        "strategy": "host_group_stratified",
+        "repeat_id": 3,
+        "seed": 4099
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-04\\cnn\\model.keras",
+        "sha256": "4acc42cb5d4db7e16363149846db7afe96d86f7ec7fc1fc564517e0e13d58fc5",
+        "strategy": "object_stratified",
+        "repeat_id": 4,
+        "seed": 5279
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-04\\cnn\\model.keras",
+        "sha256": "1c34eb9144cd1bd8aa5e435dcd2bce50fa00b353fc1baac72ca2c0fda4c74f14",
+        "strategy": "host_group_stratified",
+        "repeat_id": 4,
+        "seed": 5279
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-05\\cnn\\model.keras",
+        "sha256": "821d86c87d2844a541d9dc7cba2cb9e5b227ef76ad063d5fdcb79700760593df",
+        "strategy": "object_stratified",
+        "repeat_id": 5,
+        "seed": 6553
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-05\\cnn\\model.keras",
+        "sha256": "db08f3f9a20475b3cfacfba56de3abc8414ef1009cc2eaf1315d2995a616d4fc",
+        "strategy": "host_group_stratified",
+        "repeat_id": 5,
+        "seed": 6553
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-06\\cnn\\model.keras",
+        "sha256": "6dba4a548174071c3c0f0abb6716168917d9c0ad2b545adca7969f196e2ed791",
+        "strategy": "object_stratified",
+        "repeat_id": 6,
+        "seed": 7919
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-06\\cnn\\model.keras",
+        "sha256": "fc8e831c1eadec24698df66c95313be0d320ce4228422d13620851c6530cb8a3",
+        "strategy": "host_group_stratified",
+        "repeat_id": 6,
+        "seed": 7919
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-07\\cnn\\model.keras",
+        "sha256": "28aee4738dd521d34e9af8d1d083cb4f7dc3cad4990f451872479949b3c6c030",
+        "strategy": "object_stratified",
+        "repeat_id": 7,
+        "seed": 9341
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-07\\cnn\\model.keras",
+        "sha256": "7ceb1b6fd20cd2719a81bc35bd43768facb11523422e20e4b2ecbe6275f068e8",
+        "strategy": "host_group_stratified",
+        "repeat_id": 7,
+        "seed": 9341
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-08\\cnn\\model.keras",
+        "sha256": "1ece202df0bdecb5e74c64759e5db06bd2b834b6743f2eb6bd0a70897e376b63",
+        "strategy": "object_stratified",
+        "repeat_id": 8,
+        "seed": 104729
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-08\\cnn\\model.keras",
+        "sha256": "b77f1c57471e9cdc1c94ef6e6ae8137a04166f4baaaf0ec52c4691721ce31592",
+        "strategy": "host_group_stratified",
+        "repeat_id": 8,
+        "seed": 104729
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\object_stratified\\repeat-09\\cnn\\model.keras",
+        "sha256": "5d3e553c2d1156b8e27b70c54affa33239e9e35b3f84fff722a8096b9a940659",
+        "strategy": "object_stratified",
+        "repeat_id": 9,
+        "seed": 130363
+      },
+      {
+        "path": "data\\stage5d_runtime\\width128_v1\\host_group_stratified\\repeat-09\\cnn\\model.keras",
+        "sha256": "6ab93e02c4515f4c435337ba03cf949c6829c372e5c5bd9f77edd44550f5a1b7",
+        "strategy": "host_group_stratified",
+        "repeat_id": 9,
+        "seed": 130363
+      }
+    ],
+    "partitions": "Original QC-passing held-out test rows in frozen Stage 3 assignments, matching strategy/repeat; canonical frozen preprocessing/cache",
+    "metrics": [
+      "ROC-AUC (primary)",
+      "BCE",
+      "average precision",
+      "Brier",
+      "precision",
+      "recall",
+      "F1",
+      "accuracy",
+      "confusion matrix"
+    ],
+    "threshold": 0.5,
+    "comparisons": "Paired Stage 5D minus certified Stage 5B and Random Forest for all 20 matched runs; report strategy and overall mean/median/sample SD/min/max and all paired outcomes; object-minus-host-group by repeat is descriptive",
+    "rules": "One evaluation per saved model; no retraining, architecture changes, threshold tuning, test-based checkpoint/seed/model selection, or repeated evaluation. Verify frozen hashes and baseline split/seed identities first. Report every run. Existing Stage 5B/Random Forest test results are already reused evidence, not a fresh independent test cohort."
+  }
+}

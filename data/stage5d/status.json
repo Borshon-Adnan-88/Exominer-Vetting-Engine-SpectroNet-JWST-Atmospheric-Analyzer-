@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "context": "68875685b70ebf02974ca413f1d24bc1d60fbba38ea8b772e1cc31cc5a81ccf2",
+  "completed_cnn_fits": 20,
+  "total_cnn_fits": 20,
+  "pid": 22184,
+  "phase": "finished_validation_only",
+  "last_update": "2026-10-27T03:41:59.983987+00:00",
+  "current_run": null,
+  "new_probe_fits": 80,
+  "reused_raw_probes": 40
+}

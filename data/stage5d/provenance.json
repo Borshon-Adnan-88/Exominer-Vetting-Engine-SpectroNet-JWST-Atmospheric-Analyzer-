@@ -1,0 +1,68 @@
+{
+  "execution": {
+    "context": "68875685b70ebf02974ca413f1d24bc1d60fbba38ea8b772e1cc31cc5a81ccf2",
+    "environment": {
+      "config_sha256": "e5637804c6c2d6d394ab91db968d532052398cc1245e5384b54e99680f278d91",
+      "source_sha256": {
+        "kepler_baselines/__init__.py": "a7392556f3df43207798376bee7e40d498689b6849a9b42a7ea7951c50f20baf",
+        "kepler_baselines/inputs.py": "f593c1496b684936ce625618a3f611b820419c8168bb65cd550f31aea7b765bb",
+        "kepler_baselines/metrics.py": "d8b34416ad2144c05dafb7d841044553ddae1c77ab95d577ef4ff39bdfe9ac01",
+        "kepler_baselines/models.py": "c4a75625d9e6e01945aa20d045ad1281a029669f2a23eff0774c7927f63d8dbd",
+        "kepler_baselines/reporting.py": "c22437bb43c6aeca8779b62d89a67ab264fa6fa31f2921b6b98b121e059cc099",
+        "kepler_baselines/runner.py": "158c05f1e69ad9260f5cd3e76c990271db2943b452c094ee212be570ef333556",
+        "kepler_baselines/runtime.py": "e7eb6fe54d92f3beb253bf705cb40699638a0dd8d665b8d6636e583092692152",
+        "kepler_cnn/__init__.py": "aff7b49c38ea2f136e7dc9a137fbb2410afecc1b9f16ef8aa4198249a4c20155",
+        "kepler_cnn/artifacts.py": "97bd3d20661ddfac9b94569d4b70796c6879105b5c09201c4b1bbc6f37966077",
+        "kepler_cnn/model.py": "71aa92ff99c2d84aa2995bf3a80553e5a900e4cae2e5725ea11b98adc07499de",
+        "kepler_cnn/runner.py": "d72064d691c3a80cfa0d35a652bfa9d7479e2a038603175d608c2ab0fbf4b889",
+        "scripts/stage5_run_cnn.py": "8c7f02dbe79130e638eb9af69f4cd0373a3cda0383c19820361fcae90aa32b6f"
+      },
+      "python": "3.13.15",
+      "packages": {
+        "tensorflow": "2.21.0",
+        "keras": "3.15.1",
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.17.1",
+        "h5py": "3.14.0"
+      }
+    },
+    "config_sha256": "efdbe56597ea3371bd18c6946ba64be43edaaf3d98ebdd647c006feeb0429317",
+    "evaluation": "validation only",
+    "checkpoint": "minimum validation BCE",
+    "held_out_evaluation": false,
+    "warning": "Repeated validation reuse is development evidence, not independent confirmation."
+  },
+  "frozen_sha256": "68875685b70ebf02974ca413f1d24bc1d60fbba38ea8b772e1cc31cc5a81ccf2",
+  "source_sha256": "6d7c02838bf656b0374a1e0a34bf3030296162abf17d471bc9597ac564b366b1",
+  "report_sha256": "3fcaad83c01c7228b39f925215e75c7d248221f69fe303b2d38a666eb31ba44c",
+  "inputs": {
+    "data\\stage5d\\run_manifest.json": "38ee31e821e7bc5a936062f19f5c6934f7c68f941df76ecc1c5ed76db925c8d2",
+    "data\\stage5d\\runtime_checksums.sha256": "92c3488457c1ee9bbfd194affd8778a9ec73904081b07a0309baf693703d3555",
+    "data\\stage5d\\probe_comparisons.csv": "571a47d9805be730f4d7606c8888130d69044a03c75b7801f6a9770c1e434cfc"
+  },
+  "validation_only": true,
+  "preparation_source_sha256": {
+    "scripts/stage5d_run_fusion_width.py": "b9a6944c571682ca9cb156893dbe05b5cef2d842316ee27034c15e27cd3bc5cb",
+    "kepler_cnn_width128/__init__.py": "9995f8641e389a01f08ec3f9535efbfa1aa055552efd96bf9daa4e0762cdb8a4",
+    "kepler_cnn_width128/model.py": "bddbe70639759e50d7184278b40a0a4adabc0278385a259ab3c6de1a4b4a380a",
+    "tests/test_stage5d_fusion_width.py": "0c22c3ce112205b1101586f92da6aebaac5c6f68571fc7ec9bd68e9b9acb6aa4"
+  },
+  "verification": {
+    "finalization-focused-tests.xml": {
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "sha256": "ead08a12817db6331ea92022f21f3f393d38bd77ce018add62b63209d497b631"
+    },
+    "finalization-offline-tests.xml": {
+      "passed": 178,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "sha256": "3c5ee2a8489c55e2c36f7e033c1d34a55bc1ff27c41aab13adebe892acc1367d"
+    }
+  }
+}
