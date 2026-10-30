@@ -1,0 +1,313 @@
+{
+  "interpretation_category": "B",
+  "stage5d_test_auc": {
+    "host_group_stratified": 0.6682142322820128,
+    "object_stratified": 0.6463144392968954
+  },
+  "baseline_comparisons": [
+    {
+      "baseline": "stage5b",
+      "strategy": "host_group_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": 0.028438962786904755,
+      "median": 0.030427692122719174,
+      "sd": 0.03552366294913226,
+      "min": -0.017784090909090944,
+      "max": 0.08531612146105327,
+      "improved": 7,
+      "worsened": 3,
+      "tied": 0
+    },
+    {
+      "baseline": "stage5b",
+      "strategy": "object_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": 0.004511278195488766,
+      "median": -0.0021940372817565446,
+      "sd": 0.030106578222128373,
+      "min": -0.04120781752360714,
+      "max": 0.06082124503177144,
+      "improved": 5,
+      "worsened": 5,
+      "tied": 0
+    },
+    {
+      "baseline": "stage5b",
+      "strategy": "overall",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 20,
+      "mean": 0.01647512049119676,
+      "median": 0.011387897352809706,
+      "sd": 0.03431870794375754,
+      "min": -0.04120781752360714,
+      "max": 0.08531612146105327,
+      "improved": 12,
+      "worsened": 8,
+      "tied": 0
+    },
+    {
+      "baseline": "random_forest",
+      "strategy": "host_group_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": -0.2111237900889235,
+      "median": -0.20500167496711236,
+      "sd": 0.04119557260489919,
+      "min": -0.2929005059021923,
+      "max": -0.15851364853858618,
+      "improved": 0,
+      "worsened": 10,
+      "tied": 0
+    },
+    {
+      "baseline": "random_forest",
+      "strategy": "object_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": -0.23388142072352602,
+      "median": -0.23731255748799612,
+      "sd": 0.03609676498673337,
+      "min": -0.286364058293883,
+      "max": -0.1760250795338515,
+      "improved": 0,
+      "worsened": 10,
+      "tied": 0
+    },
+    {
+      "baseline": "random_forest",
+      "strategy": "overall",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 20,
+      "mean": -0.22250260540622477,
+      "median": -0.22480923779689244,
+      "sd": 0.03946351650460928,
+      "min": -0.2929005059021923,
+      "max": -0.15851364853858618,
+      "improved": 0,
+      "worsened": 20,
+      "tied": 0
+    },
+    {
+      "baseline": "logistic",
+      "strategy": "host_group_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": -0.08445168320811566,
+      "median": -0.08076073232323244,
+      "sd": 0.0407040841706893,
+      "min": -0.14503723855344797,
+      "max": -0.022907018168863647,
+      "improved": 0,
+      "worsened": 10,
+      "tied": 0
+    },
+    {
+      "baseline": "logistic",
+      "strategy": "object_stratified",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": -0.10557601917251036,
+      "median": -0.10893184138798168,
+      "sd": 0.04433328341425929,
+      "min": -0.17626979907681672,
+      "max": -0.011733880154932597,
+      "improved": 0,
+      "worsened": 10,
+      "tied": 0
+    },
+    {
+      "baseline": "logistic",
+      "strategy": "overall",
+      "track": "primary",
+      "metric": "roc_auc",
+      "count": 20,
+      "mean": -0.09501385119031301,
+      "median": -0.09653869522290576,
+      "sd": 0.042816346010333524,
+      "min": -0.17626979907681672,
+      "max": -0.011733880154932597,
+      "improved": 0,
+      "worsened": 20,
+      "tied": 0
+    }
+  ],
+  "validation_to_test": [
+    {
+      "strategy": "host_group_stratified",
+      "validation_delta": 0.03022097897151087,
+      "test_delta": 0.028438962786904755,
+      "direction_reproduced": true,
+      "effect": "reduced"
+    },
+    {
+      "strategy": "object_stratified",
+      "validation_delta": 0.00395796862340102,
+      "test_delta": 0.004511278195488766,
+      "direction_reproduced": true,
+      "effect": "preserved/increased"
+    },
+    {
+      "strategy": "overall",
+      "validation_delta": 0.017089473797455946,
+      "test_delta": 0.01647512049119676,
+      "direction_reproduced": true,
+      "effect": "reduced"
+    }
+  ],
+  "object_group": [
+    {
+      "metric": "accuracy",
+      "count": 10,
+      "mean": -0.02262075790099981,
+      "median": -0.02605019052968771,
+      "sd": 0.04521398263915633,
+      "min": -0.10078076657081492,
+      "max": 0.05236656596173217,
+      "improved": 3,
+      "worsened": 7,
+      "tied": 0
+    },
+    {
+      "metric": "average_precision",
+      "count": 10,
+      "mean": -0.02697408029420324,
+      "median": -0.016979845612958927,
+      "sd": 0.05839521223796038,
+      "min": -0.11869419307631968,
+      "max": 0.05310228656964966,
+      "improved": 3,
+      "worsened": 7,
+      "tied": 0
+    },
+    {
+      "metric": "brier",
+      "count": 10,
+      "mean": 0.0013845866586914336,
+      "median": 0.001108388782127212,
+      "sd": 0.005621385976456639,
+      "min": -0.007960181242664066,
+      "max": 0.010063945696202753,
+      "improved": 5,
+      "worsened": 5,
+      "tied": 0
+    },
+    {
+      "metric": "f1",
+      "count": 10,
+      "mean": -0.11972779372607285,
+      "median": -0.03427912519696502,
+      "sd": 0.3317993694156922,
+      "min": -0.6228942106033264,
+      "max": 0.5172328206708261,
+      "improved": 2,
+      "worsened": 8,
+      "tied": 0
+    },
+    {
+      "metric": "roc_auc",
+      "count": 10,
+      "mean": -0.021899792985117406,
+      "median": -0.026594571733264905,
+      "sd": 0.0569048413294484,
+      "min": -0.10712243929639054,
+      "max": 0.07030148193286867,
+      "improved": 4,
+      "worsened": 6,
+      "tied": 0
+    }
+  ],
+  "brier": [
+    {
+      "strategy": "host_group_stratified",
+      "track": "primary",
+      "brier": 0.20078952899152744
+    },
+    {
+      "strategy": "host_group_stratified",
+      "track": "qc_pass",
+      "brier": 0.20414258563355014
+    },
+    {
+      "strategy": "object_stratified",
+      "track": "primary",
+      "brier": 0.2021741156502189
+    },
+    {
+      "strategy": "object_stratified",
+      "track": "qc_pass",
+      "brier": 0.20556561428288606
+    }
+  ],
+  "qc": [
+    {
+      "strategy": "host_group_stratified",
+      "track": "primary",
+      "mean_denominator": 994.5,
+      "mean_excluded": 0.0,
+      "mean_prevalence": 0.4027149046763718,
+      "roc_auc": 0.6682142322820128,
+      "average_precision": 0.5022699684417422,
+      "brier": 0.20078952899152744,
+      "f1": 0.5132857503990408,
+      "accuracy": 0.618189740781161
+    },
+    {
+      "strategy": "host_group_stratified",
+      "track": "qc_pass",
+      "mean_denominator": 954.7,
+      "mean_excluded": 39.8,
+      "mean_prevalence": 0.4152034198380788,
+      "roc_auc": 0.6589611056327964,
+      "average_precision": 0.509903088274777,
+      "brier": 0.20414258563355014,
+      "f1": 0.5177088856415937,
+      "accuracy": 0.6120647271840491
+    },
+    {
+      "strategy": "object_stratified",
+      "track": "primary",
+      "mean_denominator": 993.0,
+      "mean_excluded": 0.0,
+      "mean_prevalence": 0.40181268882175225,
+      "roc_auc": 0.6463144392968954,
+      "average_precision": 0.475295888147539,
+      "brier": 0.2021741156502189,
+      "f1": 0.393557956672968,
+      "accuracy": 0.5955689828801611
+    },
+    {
+      "strategy": "object_stratified",
+      "track": "qc_pass",
+      "mean_denominator": 950.0,
+      "mean_excluded": 43.0,
+      "mean_prevalence": 0.4149699605485898,
+      "roc_auc": 0.6352946188818488,
+      "average_precision": 0.4810569746829776,
+      "brier": 0.20556561428288606,
+      "f1": 0.3971554347380105,
+      "accuracy": 0.5868922751923644
+    }
+  ],
+  "representation": {
+    "count": 20,
+    "mean": 0.10373371417406077,
+    "median": 0.10248821383441858,
+    "sd": 0.06152588603413824,
+    "min": -0.004932953810759311,
+    "max": 0.21303258145363424,
+    "improved": 19,
+    "worsened": 1,
+    "tied": 0
+  },
+  "recommendation": "Publication/manuscript consolidation of the frozen Kepler benchmark and representation diagnosis; no further architecture search now. Observational transfer such as Kepler-to-TESS requires a separately designed future study."
+}

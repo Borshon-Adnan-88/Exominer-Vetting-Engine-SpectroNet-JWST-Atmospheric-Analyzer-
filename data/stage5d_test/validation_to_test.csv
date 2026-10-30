@@ -1,0 +1,4 @@
+strategy,validation_delta,test_delta,direction_reproduced,effect
+host_group_stratified,0.030220978971510871,0.028438962786904755,True,reduced
+object_stratified,0.0039579686234010201,0.0045112781954887663,True,preserved/increased
+overall,0.017089473797455946,0.01647512049119676,True,reduced

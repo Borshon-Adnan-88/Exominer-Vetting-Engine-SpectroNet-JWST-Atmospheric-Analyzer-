@@ -32,3 +32,4 @@ data/stage5b_runtime/
 
 /data/stage5d_runtime/
 /data/stage5d/*.log
+/data/stage5d_test_runtime/

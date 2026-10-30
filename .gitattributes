@@ -20,3 +20,5 @@
 
 /kepler_cnn_width128/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /data/stage5d/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/data/stage5d_test/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/docs/post_stage5d_checkpoint.md -text

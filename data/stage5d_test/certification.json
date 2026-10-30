@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "models": 20,
+  "scientific_fits": 0,
+  "threshold": 0.5,
+  "evaluation": "first and only frozen Stage 5D test evaluation plus one required independent replay",
+  "tests": {
+    "focused-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "6",
+      "time": "6.082",
+      "timestamp": "2026-10-30T07:41:30.886725+00:00",
+      "hostname": "Borshonius",
+      "sha256": "889c4fb00a5a6dc9306beb07ad195f278ffa18f275d70038d994eee5a343fa0a",
+      "exit_code": 0
+    },
+    "offline-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "184",
+      "time": "202.791",
+      "timestamp": "2026-10-30T07:41:39.978828+00:00",
+      "hostname": "Borshonius",
+      "sha256": "64b5bb71952bcd25945f468ca40a3a3c839123bf3ca1c03a8967a1507ac5ef9e",
+      "exit_code": 0
+    }
+  },
+  "protected_files_unchanged": 492,
+  "replay": "passed",
+  "gate_sha256": "6d7d53ce8aa25c200d9a731ad6bc7727f3b2f5504b9dc51659a257bc9975ca0e",
+  "source_sha256": "84fb70f299a21722e904edda8c7ad22d08be2975cef97d4519dead39d07ab1bc",
+  "interpretation": "B",
+  "report_sha256": "bedeff6a7b87a05818f412cf9af24f6a0a2b150d2ee383c39554cd5e363cb557",
+  "checkpoint_sha256": "834626346f75dccbd329ce3e2f0e1f3f6de56cc05dd5fba02b64ca2c2e250138"
+}
