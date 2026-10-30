@@ -28,6 +28,7 @@ data/stage5b_runtime/
 /data/stage5a/runner.lock
 /data/stage5b/*.log
 /data/stage5b/runner.lock
+/data/stage5c/runner.lock
 
 /data/stage5d_runtime/
 /data/stage5d/*.log
