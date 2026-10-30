@@ -1,0 +1,58 @@
+# Scientific evidence checkpoint after Stage 5D
+
+This document synthesizes completed certified evidence. It does not add an experiment, change a result, or establish literature novelty. The manuscript outline, Results draft, and research decision are linked at the end.
+
+## Scientific narrative
+
+The study asks whether a fixed flux representation supports reliable confirmed-versus-false-positive classification, how evaluation depends on host separation, and why a particular dual-view CNN underperforms a classical benchmark. It is not a blind transit search, a complete TCE vetting benchmark, or a comparison with optimally tuned representatives of every model family.
+
+The label definition establishes the scope of every later conclusion. **Stage 1** froze a Kepler Q1–Q17 DR25 KOI catalogue snapshot and a conflict-excluding confirmed-versus-false-positive policy. Candidates and contradictory labels were excluded from the binary cohort. The resulting 6,637 KOIs belong to 5,804 hosts; 2,674 are confirmed and 3,963 are false positives. Confirmation selection and follow-up history limit population interpretation. Archive dispositions, Robovetter scores/flags, confirmation names, and related target-encoding metadata were forbidden model features. See the [data card](data_card_kepler_dr25.md) and [label policy](label_policy.md).
+
+**Stage 2** established real-light-curve preprocessing on a deterministic 16-KOI pilot: official DR25 long-cadence products, quality masking, independent quarter median normalization, and ephemeris-based folding into 2,000 global and 200 local flux bins. Deterministic interpolation produced finite inputs while masks/counts retained coverage evidence. There was no learned population detrending or normalization. **Stage 4A** then certified the full constructible cohort using that fixed policy: all 6,637 KOIs had model data, including 6,354 QC passes and 283 retained QC failures. Certification establishes identities, construction, and integrity, not an absence of scientific morphology/coverage warnings. In particular, the documented SAP/PDCSAP and centering flags remain limitations. See [preprocessing](kepler_lightcurve_preprocessing.md) and [full-dataset certification](kepler_stage4a_certification_report.md).
+
+The generalization question is defined by **Stage 3**, independently of the photometry: ten fixed seeds paired object-stratified and host-group-stratified 70/15/15 train/validation/test assignments. Grouping by `kepid` keeps a host wholly within a partition. The same cohort, labels, and assignments support all subsequent comparisons; constructible QC failures are retained in primary analyses. Neither strategy is a separate observational-domain dataset. See the [split policy](kepler_split_policy.md).
+
+**Stage 4B** established what the frozen 2,200-element flux vector already supports. Training-only standardized Logistic Regression and a fixed Random Forest supplied linear and nonlinear references. Random Forest was substantially stronger than either Logistic Regression or the evaluated CNN variants in test discrimination. This is a within-protocol benchmark finding, not a universal superiority claim about trees versus deep learning. See the [baseline report](kepler_stage4b_report.md).
+
+The model-development chain tests progressively narrower explanations of CNN underperformance. **Stage 5** used global/local convolutional branches, 4,160 concatenated features, a 32-unit ReLU fusion layer, dropout, and a sigmoid output. **Stage 5A** diagnosed severe or low-diversity predictions and zero sampled hidden representations in a subset of the completed fits, without evidence for corrupted inputs or nonfinite stored weights as the explanation. **Stage 5B** changed only the fusion activation to LeakyReLU(0.01), eliminating the observed collapse flags in 20 fits and improving mean test AUC modestly. Stability was therefore an important limitation, but resolving it did not close the benchmark gap. See the [original CNN](kepler_stage5_report.md), [failure analysis](kepler_stage5a_failure_analysis.md), and [activation ablation](kepler_stage5b_activation_ablation.md).
+
+**Stage 5C** used fixed training-fitted linear probes and validation-only scoring to show that useful discrimination was accessible in concatenated learned branches but substantially less accessible after 32-unit fusion. **Stage 5D** tested that diagnosis by widening fusion to 128 units while retaining the other settings. The validation probe gap nearly disappeared, yet actual test AUC improved only modestly and remained far below Random Forest. This distinguishes representation accessibility from effective end-to-end prediction. Branches still trained end-to-end, so the intervention does not isolate hidden width as the sole causal determinant of the final representations. See the [probe report](kepler_stage5c_linear_probes.md), [width validation report](kepler_stage5d_validation_analysis.md), and [frozen test report](kepler_stage5d_test_evaluation.md).
+
+## Defensible conclusions and evidence strength
+
+| Finding | Classification | What the evidence supports | What it does not establish |
+| --- | --- | --- | --- |
+| Random Forest strength | Strong result within this protocol | Mean test AUC about 0.880 under both split strategies; better AUC, AP, and Brier than all evaluated CNN variants | Superiority to a well-tuned modern CNN or to other published systems on different datasets |
+| Original CNN instability | Strong diagnostic/intervention result | Four severe and seven overlapping low-diversity runs; sampled zero fusion states; LeakyReLU removed observed flags in all 20 subsequent runs | Universal collapse prevention or a complete causal account of historical training dynamics |
+| Fusion representation bottleneck | Strong diagnostic result; mechanism remains suggestive | Fixed validation probes localize a major drop at fusion; widening reduces the signed concat-minus-hidden AUC gap by 97.9% on average | Information-theoretic destruction, identical probe hypothesis classes across widths, or compression as the sole limitation |
+| Probe preservation versus prediction | Strong negative result for the tested intervention | Hidden-probe AUC rises by 0.104532, but mean paired test AUC improves by only 0.016475; RF remains ahead by 0.222503 overall | A proof that wider heads cannot help or that the remaining limitation has been identified |
+| Host-level split sensitivity | Descriptive/suggestive result | Classical-baseline mean differences are small; CNN differences vary by variant and repeat; width128 object-minus-group AUC is −0.021900 | Equivalence, absence of all leakage, or a pure causal estimate of the effect of host overlap |
+| Remaining CNN limitation | Unresolved question | A large gap persists between linear-probe discrimination and actual output performance | Whether optimization, regularization, output-head learning, feature interactions, or another factor is decisive |
+
+The most important negative result is the persistence of a large RF advantage after both collapse removal and strong probe-gap reduction. Logistic Regression also has higher AUC/AP than the CNNs, but it does **not** dominate every probability metric: its Brier score is worse than that of Stage 5B/5D. Metric-specific language is required.
+
+## What may be publishable or novel?
+
+No literature novelty has been verified in this consolidation. A defensible paper may combine a fixed scientific question with transparent negative and diagnostic evidence; its publication case must be assessed against prior work before claiming novelty.
+
+| Contribution type | Supported contribution in this project | Claim requiring literature comparison |
+| --- | --- | --- |
+| Genuine scientific contribution | Measurements of model discrimination and split sensitivity for this explicitly confirmation-selected DR25 cohort | “On a common frozen flux-only DR25 KOI benchmark, classical baselines remain strong under host-separated evaluation.” Compare cohort/labels, split unit, representations, and metrics before treating this as new. |
+| Methodological contribution | A diagnosis → one-factor intervention → validation decision → frozen test chain | “A staged probe-guided ablation can distinguish collapse removal from preservation of accessible discrimination and from useful test prediction.” Compare existing transit-vetting ablations and diagnostic workflows. |
+| Reproducibility/engineering | Certified identities, arrays, partitions, receipts, model bindings, and independent replay | “This benchmark offers unusually complete auditability for repeated host-aware evaluation.” Compare existing reproducible datasets/code; completeness is not by itself scientific novelty. |
+| Negative result | Two targeted repairs leave the CNN substantially below RF | “Strongly reduced fusion-probe loss need not produce a competitive end-to-end classifier.” Compare negative ablations and probe-versus-task-performance studies; restrict any claim to the present tested setting. |
+| Diagnostic evidence | Zero sampled fusion endpoints and later width-sensitive probe loss | “Fusion collapse and compression can be distinct limiting phenomena in a dual-view transit classifier.” Compare known inactive-ReLU, bottleneck, and representation-probing results; these concepts themselves are not claimed as inventions. |
+
+The related-work review must specifically test these additional claims: (1) whether paired object/host splits on confirmed-versus-FP KOIs have already been studied with comparable flux-only baselines; (2) whether similar global/local CNNs have documented fusion collapse under near-baseline normalized flux; (3) whether linear probes have already localized a transit-classifier compression loss; and (4) whether a width intervention has previously separated probe preservation from test improvement. Record supporting and contradictory literature, with matched task definitions. No “first,” “state of the art,” or causal-mechanism claim is currently warranted.
+
+## Manuscript boundaries and readiness
+
+The empirical Results section can now be drafted from certified tables. Related Work, scientific framing, and reference verification remain writing/research tasks, not permission to expose another test set or start another fit. The existing held-out partitions were reused across development stages: Stage 5D was its variant's first frozen evaluation, not a new independent confirmation cohort for the research program. Ten repeats overlap and do not justify independent-observation confidence intervals. Fixed configurations do not measure optimal achievable performance by model family.
+
+Retain the confirmation-selection caveat, ephemeris-conditioned input construction, retained QC failures, scientific preprocessing warnings, validation reuse, endpoint-probe limitations, fixed threshold, and absence of external-domain evaluation in the eventual manuscript. Replay demonstrates reproducibility of saved inference in the pinned environment, not independent retraining or cross-platform equivalence.
+
+## Source and integrity note
+
+Only existing reports and certified aggregate tables were read. The master table in the [Results draft](manuscript_results_stage1_to_stage5d.md) transcribes existing repeat-summary means/sample SDs, without new prediction scoring. All 532 files tracked at the start of consolidation were hashed for a before/after equality check. No prior document, result, model, split, array, or certificate is changed by this synthesis.
+
+Next documents: [manuscript outline](manuscript_outline_after_stage5d.md), [Results draft](manuscript_results_stage1_to_stage5d.md), and [research decision](post_stage5d_research_decision.md).
